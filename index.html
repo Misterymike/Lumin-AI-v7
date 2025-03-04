@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMIN AI - Revolução da IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🚀 Bem-vindo ao LUMIN AI</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="testemunhos.html">Testemunhos</a>
+            <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQ</a>
+            <a href="compra.html" class="cta">Comprar Agora</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Transforma o teu futuro com a Inteligência Artificial!</h2>
+        <p>Descobre como a IA pode revolucionar a tua vida financeira e profissional.</p>
+        
+        <section id="chatbot">
+            <h3>LUMIN AI - Assistente Virtual 🤖</h3>
+            <p>Perguntas comuns:</p>
+            <button onclick="sendQuestion('O que é LUMIN AI?')">O que é LUMIN AI?</button>
+            <button onclick="sendQuestion('Como posso ganhar dinheiro com IA?')">Como posso ganhar dinheiro com IA?</button>
+            <button onclick="sendQuestion('Quais são as vantagens da IA?')">Quais são as vantagens da IA?</button>
+            <input type="text" id="userInput" placeholder="Escreve a tua pergunta...">
+            <button onclick="sendUserInput()">Enviar</button>
+            <div id="chatResponse"></div>
+        </section>
+    </main>
+    <script src="chatbot.js"></script>
+</body>
+</html>
