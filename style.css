@@ -1,44 +1,58 @@
+/* -------- Configuração Geral -------- */
 body {
     font-family: Arial, sans-serif;
     background: url('Fundo Ai.webp') no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
+/* -------- Cabeçalho e Navegação -------- */
 header {
-    background: rgba(0, 0, 0, 0.85); /* Fundo escuro semi-transparente */
+    background: rgba(0, 0, 0, 0.85);
     padding: 15px;
     color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    margin-top: 10px;
 }
 
 nav a {
-    color: #00FFFF; /* Azul ciano para visibilidade */
+    color: #00FFFF;
     font-weight: bold;
     margin: 10px;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #FFD700; /* Dourado ao passar o mouse */
+    color: #FFD700;
+    text-shadow: 0px 0px 8px #FFD700;
 }
 
+/* -------- Títulos e Textos -------- */
 h1, h2, h3 {
-    color: #FFD700; /* Dourado para destaque */
-    text-shadow: 2px 2px 4px black; /* Sombra para realce */
+    color: #FFD700;
+    text-shadow: 2px 2px 4px black;
 }
 
 p {
-    color: #F8F8FF; /* Branco suave para não agredir a visão */
+    color: #F8F8FF;
     text-shadow: 1px 1px 3px black;
 }
 
+/* -------- Caixa de Chatbot -------- */
 #chatbot {
-    margin-top: 20px;
-    background: rgba(34, 34, 34, 0.9); /* Fundo escuro semi-transparente */
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    background: rgba(34, 34, 34, 0.9);
     padding: 15px;
     border-radius: 10px;
-    color: white;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
 }
 
@@ -51,21 +65,27 @@ input {
     border-radius: 5px;
 }
 
+/* -------- Botões Gerais -------- */
 button {
     background: #00FFFF;
     color: black;
     font-weight: bold;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 255, 255, 0.3);
 }
 
 button:hover {
     background: #FFD700;
     color: black;
+    box-shadow: 2px 2px 10px rgba(255, 215, 0, 0.7);
+    transform: scale(1.05);
 }
 
+/* -------- Seção dos Lumins -------- */
 .lumin-container {
     display: flex;
     flex-wrap: wrap;
@@ -82,6 +102,11 @@ button:hover {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.lumin:hover {
+    transform: scale(1.02);
 }
 
 .lumin img {
@@ -91,7 +116,7 @@ button:hover {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Ajustes para botões de controle de música */
+/* -------- Botões de Controle de Música -------- */
 #music-controls {
     margin-top: 15px;
 }
@@ -101,13 +126,46 @@ button:hover {
     color: white;
     font-weight: bold;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 15px;
     margin: 5px;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 255, 255, 0.3);
 }
 
 .music-button:hover {
     background: #FFD700;
     color: black;
+    box-shadow: 2px 2px 10px rgba(255, 215, 0, 0.7);
+    transform: scale(1.05);
+}
+
+/* -------- Responsividade para Dispositivos Móveis -------- */
+@media (max-width: 768px) {
+    .lumin-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lumin {
+        width: 90%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    input {
+        width: 95%;
+    }
+
+    button {
+        width: 90%;
+    }
 }
