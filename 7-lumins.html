@@ -13,54 +13,76 @@
     <p>Conhece os assistentes LUMIN AI e as suas funcionalidades inovadoras.</p>
 
     <div class="lumin-container">
-        <!-- LUMIN AI Financeiro -->
-        <div class="lumin" onclick="narrarLumin('LUMIN AI Financeiro', 'Analisa o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.')">
+        <!-- LUMIN AI Financeiro (VIP) -->
+        <div class="lumin" id="lumin-financeiro">
             <img src="Lumin AI segurança e saude.webp" alt="LUMIN AI Financeiro">
             <h2>💰 LUMIN AI Financeiro</h2>
             <p>Analisa o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.</p>
+            <button onclick="pitchLumin('LUMIN AI Financeiro', 'Analisa o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros. Ideal para quem deseja tomar decisões financeiras mais inteligentes.')">Pitch LUMIN AI Financeiro</button>
+            <div id="planos-financeiro"></div>
         </div>
 
-        <!-- LUMIN AI Assistente -->
-        <div class="lumin" onclick="narrarLumin('LUMIN AI Assistente', 'Auxilia nas tuas tarefas diárias e organiza a tua agenda de forma eficiente.')">
+        <!-- LUMIN AI Assistente (VIP) -->
+        <div class="lumin" id="lumin-assistente">
             <img src="Lumin AI Vision.webp" alt="LUMIN AI Assistente">
             <h2>🤖 LUMIN AI Assistente</h2>
             <p>Auxilia nas tuas tarefas diárias e organiza a tua agenda de forma eficiente.</p>
+            <button onclick="pitchLumin('LUMIN AI Assistente', 'Organiza a tua agenda, define lembretes e melhora a tua produtividade com o LUMIN AI Assistente.')">Pitch LUMIN AI Assistente</button>
+            <div id="planos-assistente"></div>
         </div>
 
-        <!-- LUMIN AI Agent -->
-        <div class="lumin" onclick="narrarLumin('LUMIN AI Agent', 'Ajuda desenvolvedores a criar projetos com inteligência artificial.')">
+        <!-- LUMIN AI Agent (VIP) -->
+        <div class="lumin" id="lumin-agent">
             <img src="Lumin AI Central(1).webp" alt="LUMIN AI Agent">
             <h2>🛠️ LUMIN AI Agent</h2>
             <p>Ajuda desenvolvedores a criar projetos com inteligência artificial.</p>
+            <button onclick="pitchLumin('LUMIN AI Agent', 'Desenvolva projetos de IA com o LUMIN AI Agent, ideal para programadores e desenvolvedores.')">Pitch LUMIN AI Agent</button>
+            <div id="planos-agent"></div>
         </div>
 
-        <!-- LUMIN AI Recycle -->
-        <div class="lumin" onclick="narrarLumin('LUMIN AI Recycle', 'Promove a sustentabilidade ajudando a gerir resíduos e reciclagem de forma inteligente.')">
+        <!-- LUMIN AI Recycle (Normal) -->
+        <div class="lumin" id="lumin-recycle">
             <img src="Lumin AI segurança e saude.webp" alt="LUMIN AI Recycle">
             <h2>♻️ LUMIN AI Recycle</h2>
             <p>Promove a sustentabilidade ajudando a gerir resíduos e reciclagem de forma inteligente.</p>
+            <button onclick="pitchLumin('LUMIN AI Recycle', 'Promove a sustentabilidade ajudando a gerir resíduos e reciclagem de forma inteligente.')">Pitch LUMIN AI Recycle</button>
+            <div id="planos-recycle"></div>
         </div>
 
-        <!-- LUMIN AI Vision -->
-        <div class="lumin" onclick="narrarLumin('LUMIN AI Vision', 'Utiliza tecnologia de visão computacional para ajudar na acessibilidade e análise de imagens.')">
+        <!-- LUMIN AI Vision (Normal) -->
+        <div class="lumin" id="lumin-vision">
             <img src="Lumin AI Vision.webp" alt="LUMIN AI Vision">
             <h2>👁️ LUMIN AI Vision</h2>
             <p>Utiliza tecnologia de visão computacional para ajudar na acessibilidade e análise de imagens.</p>
+            <button onclick="pitchLumin('LUMIN AI Vision', 'Utiliza tecnologia de visão computacional para ajudar na acessibilidade e análise de imagens.')">Pitch LUMIN AI Vision</button>
+            <div id="planos-vision"></div>
         </div>
 
-        <!-- LUMIN AI Security -->
-        <div class="lumin" onclick="narrarLumin('LUMIN AI Security', 'Protege os teus dados e sistemas contra ameaças cibernéticas.')">
+        <!-- LUMIN AI Security (Normal) -->
+        <div class="lumin" id="lumin-security">
             <img src="Lumin AI Central(1).webp" alt="LUMIN AI Security">
             <h2>🔒 LUMIN AI Security</h2>
             <p>Protege os teus dados e sistemas contra ameaças cibernéticas.</p>
+            <button onclick="pitchLumin('LUMIN AI Security', 'Protege os teus dados e sistemas contra ameaças cibernéticas.')">Pitch LUMIN AI Security</button>
+            <div id="planos-security"></div>
         </div>
 
-        <!-- LUMIN AI Educador -->
-        <div class="lumin" onclick="narrarLumin('LUMIN AI Educador', 'Facilita o aprendizado com recomendações personalizadas de cursos e materiais educativos.')">
+        <!-- LUMIN AI Educador (Normal) -->
+        <div class="lumin" id="lumin-educador">
             <img src="Lumin AI segurança e saude.webp" alt="LUMIN AI Educador">
             <h2>📚 LUMIN AI Educador</h2>
             <p>Facilita o aprendizado com recomendações personalizadas de cursos e materiais educativos.</p>
+            <button onclick="pitchLumin('LUMIN AI Educador', 'Facilita o aprendizado com recomendações personalizadas de cursos e materiais educativos.')">Pitch LUMIN AI Educador</button>
+            <div id="planos-educador"></div>
         </div>
+    </div>
+
+    <!-- Caixa de Texto para Perguntas -->
+    <div id="chatbox">
+        <h3>Tem dúvidas? Pergunte ao LUMIN AI!</h3>
+        <input type="text" id="userInput" placeholder="Digite sua pergunta..." onkeyup="checkInput(event)">
+        <button onclick="sendUserInput()">Enviar Pergunta</button>
+        <div id="chatResponse"></div>
     </div>
 
     <script src="script.js"></script>
@@ -74,12 +96,97 @@
             window.speechSynthesis.speak(msg);
         }
 
-        // Função para narrar as vantagens de cada Lumin
-        function narrarLumin(nome, descricao) {
-            const mensagem = `Conheça o ${nome}. ${descricao}`;
+        // Função para narrar o pitch de vendas de cada Lumin
+        function pitchLumin(nome, descricao) {
+            const mensagem = `Apresentando o ${nome}. ${descricao} Escolha o plano que melhor se adapta às suas necessidades.`;
             const msg = new SpeechSynthesisUtterance(mensagem);
             msg.lang = 'pt-PT';
             window.speechSynthesis.speak(msg);
+
+            // Mostrar opções de plano
+            mostrarPlanos(nome);
+        }
+
+        // Função para mostrar os planos de pagamento
+        function mostrarPlanos(nome) {
+            let planosHTML = '';
+            
+            if (nome === 'LUMIN AI Financeiro' || nome === 'LUMIN AI Assistente' || nome === 'LUMIN AI Agent') {
+                // Planos para Lumins VIP
+                planosHTML = `
+                    <h3>Escolha o seu plano VIP:</h3>
+                    <button onclick="escolherPlano('${nome}', 'Mensal', 200)">Mensal - 200€</button>
+                    <button onclick="escolherPlano('${nome}', 'Anual', 5000)">Anual - 5000€ (Desconto de 20%)</button>
+                    <button onclick="escolherPlano('${nome}', 'Vitalício', 20000)">Vitalício - 20000€ (Acesso para sempre)</button>
+                `;
+            } else {
+                // Planos para Lumins Normais
+                planosHTML = `
+                    <h3>Escolha o seu plano:</h3>
+                    <button onclick="escolherPlano('${nome}', 'Mensal', 10)">Mensal - 10€</button>
+                    <button onclick="escolherPlano('${nome}', 'Anual', 100)">Anual - 100€ (Desconto de 20%)</button>
+                    <button onclick="escolherPlano('${nome}', 'Vitalício', 300)">Vitalício - 300€ (Acesso para sempre)</button>
+                `;
+            }
+
+            // Atualizar o local correto para mostrar os planos
+            if (nome === 'LUMIN AI Financeiro') {
+                document.getElementById('planos-financeiro').innerHTML = planosHTML;
+            } else if (nome === 'LUMIN AI Assistente') {
+                document.getElementById('planos-assistente').innerHTML = planosHTML;
+            } else if (nome === 'LUMIN AI Agent') {
+                document.getElementById('planos-agent').innerHTML = planosHTML;
+            } else if (nome === 'LUMIN AI Recycle') {
+                document.getElementById('planos-recycle').innerHTML = planosHTML;
+            } else if (nome === 'LUMIN AI Vision') {
+                document.getElementById('planos-vision').innerHTML = planosHTML;
+            } else if (nome === 'LUMIN AI Security') {
+                document.getElementById('planos-security').innerHTML = planosHTML;
+            } else if (nome === 'LUMIN AI Educador') {
+                document.getElementById('planos-educador').innerHTML = planosHTML;
+            }
+        }
+
+        // Função para escolher o plano
+        function escolherPlano(nome, plano, preco) {
+            const mensagem = `Você escolheu o plano ${plano} para o ${nome}. O preço é ${preco}€. Excelente escolha!`;
+            const msg = new SpeechSynthesisUtterance(mensagem);
+            msg.lang = 'pt-PT';
+            window.speechSynthesis.speak(msg);
+        }
+
+        // Função para verificar se o usuário digitou algo na caixa de texto
+        function checkInput(event) {
+            if (event.key === 'Enter') {
+                sendUserInput();
+            }
+        }
+
+        // Função para enviar a entrada do usuário e interagir com o chatbot
+        function sendUserInput() {
+            const userInput = document.getElementById('userInput').value.toLowerCase();
+            const chatResponse = document.getElementById('chatResponse');
+            let responseText = '';
+
+            if (["olá", "oi", "bom dia", "boa tarde", "boa noite"].includes(userInput)) {
+                responseText = "Olá! Como posso ajudar-te hoje? 😊";
+            } else if (userInput.includes('lumin ai')) {
+                responseText = 'LUMIN AI é um assistente virtual projetado para ajudar na automatização e eficiência financeira. Descobre os nossos serviços.';
+            } else if (userInput.includes('planos')) {
+                responseText = 'Os nossos planos incluem mensal, anual e vitalício. Escolha o que melhor se adapta às suas necessidades.';
+            } else {
+                responseText = 'Desculpa, não entendi. Podes reformular a pergunta?';
+            }
+
+            chatResponse.innerHTML = `<p><strong>LUMIN AI:</strong> ${responseText}</p>`;
+
+            // Narração da resposta
+            const msg = new SpeechSynthesisUtterance(responseText);
+            msg.lang = 'pt-PT';
+            window.speechSynthesis.speak(msg);
+
+            // Limpar a caixa de entrada
+            document.getElementById('userInput').value = '';
         }
     </script>
 </body>
