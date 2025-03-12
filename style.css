@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('Fundo Ai.webp') no-repeat center center fixed;
+    background: url('Fundo-AI.webp') no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
 }
 
 header {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.85);
     padding: 15px;
     color: white;
 }
@@ -29,13 +29,12 @@ h1, h2, h3 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px;
 }
 
 .lumin-card {
     background-color: rgba(28, 28, 28, 0.9);
     color: white;
-    width: 320px;
+    width: 300px;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -43,12 +42,21 @@ h1, h2, h3 {
 
 .lumin-card img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
-#chatbot {
-    background: rgba(34, 34, 34, 0.9);
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 10px;
+.botao-compra {
+    display: block;
+    margin: 5px auto;
+    padding: 8px;
+    color: black;
+    background: #00FFFF;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao-compra.vip {
+    background: #FFD700;
 }
