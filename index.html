@@ -7,15 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <script src="chatbot.js" defer></script>
 </head>
-<body onload="narrarIntroducao()">
-
-    <!-- Música de fundo -->
-    <audio id="backgroundMusic" autoplay loop>
-        <source src="lumin_ai_music_fixed.mp3" type="audio/mp3">
-    </audio>
+<body onload="narrarBoasVindas()">
 
     <header>
-        <h1>🚀 Bem-vindo ao LUMIN AI!</h1>
+        <h1>🚀 Bem-vindo ao <span style="color: yellow;">LUMIN AI!</span></h1>
         <nav>
             <a href="index.html">Início</a>
             <a href="7-lumins.html">Os 7 Lumins</a>
@@ -27,38 +22,41 @@
     </header>
 
     <main>
-        <h2>Transforma o teu futuro com Inteligência Artificial!</h2>
+        <h2>Transforma o teu futuro com 🌐 Inteligência Artificial!</h2>
         <p>Explora os Lumins AI e escolhe o melhor plano para ti.</p>
 
-        <!-- Caixa de interação com o LUMIN AI -->
+        <!-- Chatbot -->
         <div id="chatbox">
-            <h3>💬 Fala com o LUMIN AI!</h3>
+            <h3>💬 Fala com o <span style="color: yellow;">LUMIN AI!</span></h3>
             <input type="text" id="userInput" placeholder="Escreve a tua pergunta..." onkeyup="checkInput(event)">
             <button onclick="sendUserInput()">Enviar Pergunta</button>
             <div id="chatResponse"></div>
-
-            <!-- Perguntas rápidas -->
-            <div class="quick-questions">
-                <button onclick="preencherPergunta('O que é LUMIN AI?')">O que é LUMIN AI?</button>
-                <button onclick="preencherPergunta('Quais são os planos?')">Quais são os planos?</button>
-                <button onclick="preencherPergunta('Como comprar?')">Como comprar?</button>
-                <button onclick="preencherPergunta('Quais são os Lumins?')">Quais são os Lumins?</button>
-            </div>
         </div>
 
-        <!-- Controles de música -->
+        <!-- Botões de Perguntas Rápidas -->
+        <div id="quickQuestions">
+            <button onclick="perguntaChatbot('O que é LUMIN AI?')">🤖 O que é LUMIN AI?</button>
+            <button onclick="perguntaChatbot('Quais são os planos?')">📜 Quais são os planos?</button>
+            <button onclick="perguntaChatbot('Como comprar?')">🛒 Como comprar?</button>
+            <button onclick="perguntaChatbot('Quais são os Lumins?')">🔍 Quais são os Lumins?</button>
+        </div>
+
+        <!-- Controles de Música -->
         <div id="musicControls">
-            <button onclick="toggleMusic()">🎵 Pausar/Retomar Música</button>
+            <button onclick="toggleMusica()">🎵 Pausar/Retomar Música</button>
             <button onclick="aumentarVolume()">🔊 Aumentar Volume</button>
             <button onclick="diminuirVolume()">🔉 Diminuir Volume</button>
         </div>
     </main>
 
     <script>
-        var audio = document.getElementById("backgroundMusic");
-        audio.volume = 0.1; // Volume inicial reduzido
+        // Música de Fundo
+        var audio = new Audio('lumin_ai_music_fixed.mp3');
+        audio.loop = true;
+        audio.volume = 0.1;
+        audio.play();
 
-        function toggleMusic() {
+        function toggleMusica() {
             if (audio.paused) {
                 audio.play();
             } else {
@@ -78,64 +76,50 @@
             }
         }
 
-        function narrarIntroducao() {
-            const mensagem = "Bem-vindo ao LUMIN AI! Descobre como a inteligência artificial pode mudar a tua vida.";
-            const msg = new SpeechSynthesisUtterance(mensagem);
+        // Narração de Boas-Vindas
+        function narrarBoasVindas() {
+            let msg = new SpeechSynthesisUtterance("Bem-vindo ao LUMIN AI! Explora as nossas funcionalidades e transforma o teu futuro.");
             msg.lang = 'pt-PT';
             window.speechSynthesis.speak(msg);
-
-            setTimeout(() => {
-                const impactante = "Aqui, a IA não é apenas tecnologia, é uma revolução. Prepara-te!";
-                const msgImpactante = new SpeechSynthesisUtterance(impactante);
-                msgImpactante.lang = 'pt-PT';
-                window.speechSynthesis.speak(msgImpactante);
-            }, 2500);
         }
 
-        function preencherPergunta(pergunta) {
-            document.getElementById("userInput").value = pergunta;
-            sendUserInput();
-        }
-
+        // Chatbot com Narração
         function sendUserInput() {
-            const userInput = document.getElementById("userInput").value.toLowerCase();
-            const chatResponse = document.getElementById("chatResponse");
+            const userInput = document.getElementById('userInput').value.toLowerCase();
+            const chatResponse = document.getElementById('chatResponse');
             let responseText = '';
 
-            const respostas = {
-                "olá": "Olá! Como posso ajudar-te hoje? 😊",
-                "oi": "Oi! Que dúvida tens sobre o LUMIN AI?",
-                "bom dia": "Bom dia! Estás pronto para explorar a revolução da IA?",
-                "boa tarde": "Boa tarde! Como posso ajudar-te?",
-                "boa noite": "Boa noite! Tens alguma dúvida sobre os Lumins AI?",
-                "lumin ai": "O LUMIN AI é um assistente inteligente que melhora a tua produtividade e gestão financeira.",
-                "planos": "Os planos incluem mensal, anual e vitalício. Escolhe o que mais se adapta às tuas necessidades!",
-                "preço": "Os planos básicos variam entre 200€ por mês e 20.000€ para um acesso vitalício.",
-                "lumins": "Existem 7 Lumins AI diferentes, cada um especializado em uma área. Podes conhecê-los na página dedicada!",
-                "compra": "Para adquirir um plano, basta clicar no botão 'Comprar Agora' e escolher a melhor opção para ti."
-            };
-
-            responseText = respostas[userInput] || "Desculpa, não entendi. Podes reformular a pergunta?";
+            if (["olá", "oi", "bom dia", "boa tarde", "boa noite"].includes(userInput)) {
+                responseText = "Olá! Como posso ajudar-te hoje? 😊";
+            } else if (userInput.includes('lumin ai')) {
+                responseText = "LUMIN AI é um assistente virtual projetado para revolucionar a tua forma de interagir com a tecnologia.";
+            } else if (userInput.includes('planos')) {
+                responseText = "Temos planos Mensal, Anual e Vitalício. Descobre qual o melhor para ti!";
+            } else {
+                responseText = "Desculpa, não entendi. Podes reformular a pergunta?";
+            }
 
             chatResponse.innerHTML = `<p><strong>LUMIN AI:</strong> ${responseText}</p>`;
 
-            // Narração da resposta
-            narrarResposta(responseText);
+            // Narração da Resposta
+            let msg = new SpeechSynthesisUtterance(responseText);
+            msg.lang = 'pt-PT';
+            window.speechSynthesis.speak(msg);
+
             document.getElementById('userInput').value = '';
         }
 
-        function narrarResposta(texto) {
-            const msg = new SpeechSynthesisUtterance(texto);
-            msg.lang = "pt-PT";
-            window.speechSynthesis.speak(msg);
-        }
-
         function checkInput(event) {
-            if (event.key === "Enter") {
+            if (event.key === 'Enter') {
                 sendUserInput();
             }
         }
-    </script>
 
+        // Função para Perguntas Rápidas
+        function perguntaChatbot(pergunta) {
+            document.getElementById('userInput').value = pergunta;
+            sendUserInput();
+        }
+    </script>
 </body>
 </html>
