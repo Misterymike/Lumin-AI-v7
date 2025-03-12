@@ -1,6 +1,7 @@
-function narrar(nome, descricao) {
-    const mensagem = `Apresentando o ${nome}. ${descricao}`;
-    const msg = new SpeechSynthesisUtterance(mensagem);
-    msg.lang = 'pt-PT';
-    window.speechSynthesis.speak(msg);
+function narrar(titulo, texto) {
+    const mensagem = new SpeechSynthesisUtterance();
+    mensagem.text = `${titulo}. ${texto}`;
+    mensagem.lang = 'pt-PT';
+    mensagem.rate = 1;
+    speechSynthesis.speak(mensagem);
 }
