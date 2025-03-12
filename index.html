@@ -8,8 +8,8 @@
     <script src="chatbot.js" defer></script>
 </head>
 <body onload="narrarBoasVindas()">
-    <!-- Música de fundo com volume controlado -->
-    <audio autoplay loop volume="0.1">
+    <!-- Música de fundo com controle de volume via JavaScript -->
+    <audio id="backgroundMusic" autoplay loop>
         <source src="lumin_ai_music_fixed.mp3" type="audio/mp3">
     </audio>
 
@@ -39,6 +39,10 @@
     </main>
 
     <script>
+        // Ajuste de volume da música de fundo com JavaScript
+        var backgroundMusic = document.getElementById('backgroundMusic');
+        backgroundMusic.volume = 0.1; // Volume 10% para não interferir com a narração
+
         // Função de boas-vindas com narração
         function narrarBoasVindas() {
             // Narra a introdução ao carregar a página
