@@ -27,6 +27,30 @@
             msg.lang = 'pt-PT';
             window.speechSynthesis.speak(msg);
         }
+
+        // Função para pausar a música
+        function pausarMusica() {
+            audio.pause();
+        }
+
+        // Função para retomar a música
+        function retomarMusica() {
+            audio.play();
+        }
+
+        // Função para aumentar o volume da música
+        function aumentarVolume() {
+            if (audio.volume < 1) {
+                audio.volume += 0.1;
+            }
+        }
+
+        // Função para diminuir o volume da música
+        function diminuirVolume() {
+            if (audio.volume > 0) {
+                audio.volume -= 0.1;
+            }
+        }
     </script>
 </head>
 <body onload="narrarBoasVindas()">
@@ -57,6 +81,14 @@
             <input type="text" id="userInput" placeholder="Digite sua pergunta..." onkeyup="checkInput(event)">
             <button onclick="sendUserInput()">Enviar Pergunta</button>
             <div id="chatResponse"></div>
+        </div>
+
+        <!-- Controles de música -->
+        <div id="musicControls">
+            <button onclick="pausarMusica()">Pausar Música</button>
+            <button onclick="retomarMusica()">Retomar Música</button>
+            <button onclick="aumentarVolume()">Aumentar Volume</button>
+            <button onclick="diminuirVolume()">Diminuir Volume</button>
         </div>
     </main>
 
