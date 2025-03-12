@@ -1,62 +1,11 @@
-body {
-    font-family: Arial, sans-serif;
-    background: url('Fundo-AI.webp') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    text-align: center;
-}
-
-header {
-    background: rgba(0, 0, 0, 0.85);
-    padding: 15px;
-    color: white;
-}
-
-nav a {
-    color: #00FFFF;
-    font-weight: bold;
-    margin: 10px;
-    text-decoration: none;
-}
-
-h1, h2, h3 {
-    color: #FFD700;
-    text-shadow: 2px 2px 4px black;
-}
-
-.lumin-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.lumin-card {
-    background-color: rgba(28, 28, 28, 0.9);
-    color: white;
-    width: 300px;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-}
-
 .lumin-card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    cursor: pointer; /* Mostra que é interativo */
+    transition: transform 0.2s ease-in-out;
 }
 
-.botao-compra {
-    display: block;
-    margin: 5px auto;
-    padding: 8px;
-    color: black;
-    background: #00FFFF;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.botao-compra.vip {
-    background: #FFD700;
+.lumin-card img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
