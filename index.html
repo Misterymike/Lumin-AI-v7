@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUMIN AI - Revolução da IA</title>
+    <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="chatbot.js" defer></script>
+    <script src="narracao.js" defer></script> 
 </head>
-<body onload="narrarBoasVindas()">
+<body>
 
     <header>
-        <h1>🚀 Bem-vindo ao <span style="color: yellow;">LUMIN AI!</span></h1>
+        <h1>🔷 Os 7 Lumins AI</h1>
         <nav>
-            <a href="index.html">Início</a>
-            <a href="7-lumins.html">Os 7 Lumins</a>
+            <a href="index.html">Voltar à página inicial</a>
             <a href="sobre.html">Sobre</a>
             <a href="testemunhos.html">Testemunhos</a>
             <a href="faq.html">FAQ</a>
@@ -22,104 +21,47 @@
     </header>
 
     <main>
-        <h2>Transforma o teu futuro com 🌐 Inteligência Artificial!</h2>
-        <p>Explora os Lumins AI e escolhe o melhor plano para ti.</p>
+        <h2>✨ Conheça os Lumins AI! ✨</h2>
 
-        <!-- Chatbot -->
-        <div id="chatbox">
-            <h3>💬 Fala com o <span style="color: yellow;">LUMIN AI!</span></h3>
-            <input type="text" id="userInput" placeholder="Escreve a tua pergunta..." onkeyup="checkInput(event)">
-            <button onclick="sendUserInput()">Enviar Pergunta</button>
-            <div id="chatResponse"></div>
+        <div class="lumin-container">
+            <!-- LUMIN AI Financeiro -->
+            <div class="lumin-card">
+                <img src="Lumin Ai FINANCEIRO.webp" alt="Lumin AI Financeiro">
+                <h3>💰 LUMIN AI Financeiro</h3>
+                <p>Gestão de investimentos, previsão de tendências e planejamento financeiro.</p>
+                <button class="narrar" onclick="narrar('LUMIN AI Financeiro', 'Gestão de investimentos, previsão de tendências e planejamento financeiro.')">🔊 Ouvir</button>
+                <div class="planos">
+                    <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao basico">Básico Mensal</a>
+                    <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao basico">Básico Anual</a>
+                    <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao basico">Básico Vitalício</a>
+                    <a href="https://buy.stripe.com/3cs3d3aim5Um8p2002" class="botao vip">VIP Mensal</a>
+                    <a href="https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn" class="botao vip">VIP Anual</a>
+                    <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao vip">VIP Vitalício</a>
+                </div>
+            </div>
+
+            <!-- Repetir estrutura para os outros Lumins -->
+            <!-- LUMIN AI Recicle -->
+            <div class="lumin-card">
+                <img src="Lumin Ai Recicle.webp" alt="Lumin AI Recicle">
+                <h3>♻️ LUMIN AI Recicle</h3>
+                <p>Ajuda na reciclagem com identificação de materiais e conexões com serviços.</p>
+                <button class="narrar" onclick="narrar('LUMIN AI Recicle', 'Ajuda na reciclagem com identificação de materiais e conexões com serviços.')">🔊 Ouvir</button>
+                <div class="planos">
+                    <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao basico">Básico Mensal</a>
+                    <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao basico">Básico Anual</a>
+                    <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao basico">Básico Vitalício</a>
+                    <a href="https://buy.stripe.com/3cs3d3aim5Um8p2002" class="botao vip">VIP Mensal</a>
+                    <a href="https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn" class="botao vip">VIP Anual</a>
+                    <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao vip">VIP Vitalício</a>
+                </div>
+            </div>
+
         </div>
-
-        <!-- Botões de Perguntas Rápidas -->
-        <div id="quickQuestions">
-            <button onclick="perguntaChatbot('O que é LUMIN AI?')">🤖 O que é LUMIN AI?</button>
-            <button onclick="perguntaChatbot('Quais são os planos?')">📜 Quais são os planos?</button>
-            <button onclick="perguntaChatbot('Como comprar?')">🛒 Como comprar?</button>
-            <button onclick="perguntaChatbot('Quais são os Lumins?')">🔍 Quais são os Lumins?</button>
-        </div>
-
-        <!-- Controles de Música -->
-        <div id="musicControls">
-            <button onclick="toggleMusica()">🎵 Pausar/Retomar Música</button>
-            <button onclick="aumentarVolume()">🔊 Aumentar Volume</button>
-            <button onclick="diminuirVolume()">🔉 Diminuir Volume</button>
+        <div class="pagamento-seguro">
+            ✅ Pagamento 100% seguro via <b>Stripe</b>
         </div>
     </main>
 
-    <script>
-        // Música de Fundo
-        var audio = new Audio('lumin_ai_music_fixed.mp3');
-        audio.loop = true;
-        audio.volume = 0.1;
-        audio.play();
-
-        function toggleMusica() {
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
-        }
-
-        function aumentarVolume() {
-            if (audio.volume < 1) {
-                audio.volume += 0.1;
-            }
-        }
-
-        function diminuirVolume() {
-            if (audio.volume > 0) {
-                audio.volume -= 0.1;
-            }
-        }
-
-        // Narração de Boas-Vindas
-        function narrarBoasVindas() {
-            let msg = new SpeechSynthesisUtterance("Bem-vindo ao LUMIN AI! Explora as nossas funcionalidades e transforma o teu futuro.");
-            msg.lang = 'pt-PT';
-            window.speechSynthesis.speak(msg);
-        }
-
-        // Chatbot com Narração
-        function sendUserInput() {
-            const userInput = document.getElementById('userInput').value.toLowerCase();
-            const chatResponse = document.getElementById('chatResponse');
-            let responseText = '';
-
-            if (["olá", "oi", "bom dia", "boa tarde", "boa noite"].includes(userInput)) {
-                responseText = "Olá! Como posso ajudar-te hoje? 😊";
-            } else if (userInput.includes('lumin ai')) {
-                responseText = "LUMIN AI é um assistente virtual projetado para revolucionar a tua forma de interagir com a tecnologia.";
-            } else if (userInput.includes('planos')) {
-                responseText = "Temos planos Mensal, Anual e Vitalício. Descobre qual o melhor para ti!";
-            } else {
-                responseText = "Desculpa, não entendi. Podes reformular a pergunta?";
-            }
-
-            chatResponse.innerHTML = `<p><strong>LUMIN AI:</strong> ${responseText}</p>`;
-
-            // Narração da Resposta
-            let msg = new SpeechSynthesisUtterance(responseText);
-            msg.lang = 'pt-PT';
-            window.speechSynthesis.speak(msg);
-
-            document.getElementById('userInput').value = '';
-        }
-
-        function checkInput(event) {
-            if (event.key === 'Enter') {
-                sendUserInput();
-            }
-        }
-
-        // Função para Perguntas Rápidas
-        function perguntaChatbot(pergunta) {
-            document.getElementById('userInput').value = pergunta;
-            sendUserInput();
-        }
-    </script>
 </body>
 </html>
