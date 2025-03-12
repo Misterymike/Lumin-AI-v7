@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUMIN AI - Página Inicial</title>
+    <title>LUMIN AI - Revolução da IA</title>
     <link rel="stylesheet" href="style.css">
-    <script src="chatbot.js" defer></script>
+    <script>
+        // Tocar música de fundo com volume ajustado
+        var audio = new Audio('lumin_ai_music_fixed.mp3');
+        audio.loop = true;
+        audio.volume = 0.1;  // Ajustando o volume da música para não sobrepor a narração
+        audio.play();
+
+        // Função de narração de introdução ao carregar a página
+        function narrarIntroducao() {
+            const mensagem = "Bem-vindo aos Lumins AI! Escolha o plano que melhor se adapta às suas necessidades.";
+            const msg = new SpeechSynthesisUtterance(mensagem);
+            msg.lang = 'pt-PT';
+            window.speechSynthesis.speak(msg);
+        }
+
+        // Função de narração para os Lumins
+        function narrarLumin(nome, descricao) {
+            const mensagem = `Apresentando o ${nome}. ${descricao}`;
+            const msg = new SpeechSynthesisUtterance(mensagem);
+            msg.lang = 'pt-PT';
+            window.speechSynthesis.speak(msg);
+        }
+    </script>
 </head>
 <body onload="narrarBoasVindas()">
     <!-- Música de fundo com controle de volume via JavaScript -->
