@@ -19,18 +19,9 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
-    color: #FFD700;
-}
-
 h1, h2, h3 {
     color: #FFD700;
     text-shadow: 2px 2px 4px black;
-}
-
-p {
-    color: #F8F8FF;
-    text-shadow: 1px 1px 3px black;
 }
 
 .lumin-container {
@@ -48,49 +39,16 @@ p {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
 .lumin-card img {
     width: 100%;
-    height: auto;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.botao-basico, .botao-vip {
-    display: inline-block;
-    padding: 8px;
-    margin: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.botao-basico {
-    background: #00A1A1;
-    color: white;
-}
-
-.botao-vip {
-    background: #FFD700;
-    color: black;
-}
-
-button {
-    background: #00FFFF;
-    color: black;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
+#chatbot {
+    background: rgba(34, 34, 34, 0.9);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
