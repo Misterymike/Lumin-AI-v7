@@ -57,10 +57,51 @@
                 </div>
             </div>
 
-            <!-- Continua com os outros Lumins da mesma forma... -->
+            <!-- Aqui adicionamos os outros Lumins AI -->
+            <div class="lumin-card">
+                <img src="Lumin AI Vision.webp" alt="Lumin AI Vision">
+                <h3>👁️ LUMIN AI Vision</h3>
+                <p>Reconhecimento de imagens e suporte para deficientes visuais.</p>
+            </div>
+
+            <div class="lumin-card">
+                <img src="Lumin AI segurança e saude.webp" alt="Lumin AI Segurança">
+                <h3>🔒 LUMIN AI Segurança</h3>
+                <p>Proteção de dados e segurança digital avançada.</p>
+            </div>
+
+            <div class="lumin-card">
+                <img src="Lumin AI Music.webp" alt="Lumin AI Music">
+                <h3>🎵 LUMIN AI Music</h3>
+                <p>Exploração de música com inteligência artificial.</p>
+            </div>
+
+            <div class="lumin-card">
+                <img src="Lumin AI Central(1).webp" alt="Lumin AI Central">
+                <h3>🌎 LUMIN AI Central</h3>
+                <p>O núcleo do ecossistema que conecta todos os Lumins.</p>
+            </div>
 
         </div>
     </main>
+
+    <div id="chatbot">
+        <h2>🤖 Fala com o LUMIN AI</h2>
+        <input type="text" id="pergunta" placeholder="Escreve a tua pergunta...">
+        <button onclick="enviarPergunta()">Enviar</button>
+    </div>
+
+    <script>
+        function narrar(nome, descricao) {
+            let mensagem = new SpeechSynthesisUtterance(nome + ". " + descricao);
+            speechSynthesis.speak(mensagem);
+        }
+
+        function enviarPergunta() {
+            let pergunta = document.getElementById("pergunta").value;
+            alert("LUMIN AI responde: " + pergunta);
+        }
+    </script>
 
 </body>
 </html>
