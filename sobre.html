@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre o LUMIN AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script> <!-- Script para narração -->
+    <script src="narracao.js" defer></script> <!-- Script para a narração -->
 </head>
 <body>
 
@@ -13,76 +13,79 @@
         <h1>🔷 Sobre o LUMIN AI</h1>
         <nav>
             <a href="index.html">🏠 Início</a>
-            <a href="7lumins.html">🤖 Os 7 Lumins</a>
-            <a href="testemunhos.html">🗣️ Testemunhos</a>
+            <a href="7lumins.html">🔹 Os 7 Lumins</a>
+            <a href="testemunhos.html">🗣 Testemunhos</a>
             <a href="faq.html">❓ FAQ</a>
-            <a href="compra.html" class="cta">💎 Comprar Agora</a>
+            <a href="compra.html" class="cta">🛒 Comprar Agora</a>
         </nav>
     </header>
 
-    <main class="sobre-container">
-        
-        <section class="sobre-intro">
+    <main>
+
+        <!-- Seção do Vídeo -->
+        <section class="video-section">
             <h2>🚀 O Futuro é Agora: Junta-te ao LUMIN AI</h2>
-            <p>O **LUMIN AI não é apenas tecnologia** – é um movimento. Criámos um ecossistema onde inteligência artificial, **liberdade financeira e automação** trabalham a favor do ser humano.</p>
-            <p>Queremos um mundo onde **as pessoas tenham tempo para viver, criar e inovar** sem ficarem presas a tarefas repetitivas e contas caras.</p>
-            <button onclick="narrarSobre()">🔊 Ouvir a Visão do LUMIN</button>
+            <p>Descobre como o LUMIN AI pode transformar a tua vida através da inteligência artificial e da liberdade financeira.</p>
+            <video controls autoplay muted>
+                <source src="lumin-apresentacao.mp4" type="video/mp4">
+                O teu navegador não suporta vídeos.
+            </video>
         </section>
 
-        <section class="sobre-missao">
+        <!-- Narração Interativa -->
+        <section class="narracao">
+            <button onclick="narrarTexto()" class="botao-narracao">🔊 Ouvir a Visão do LUMIN</button>
+        </section>
+
+        <!-- Seção de Visão -->
+        <section class="visao">
             <h2>🌍 A Nossa Visão</h2>
-            <p>Vivemos num mundo onde o tempo é desperdiçado, os custos aumentam e a informação é manipulada. O LUMIN AI surge para **quebrar esse ciclo**, trazendo uma alternativa real.</p>
+            <p>Vivemos num mundo onde o tempo é desperdiçado, os custos aumentam e a informação é manipulada. O LUMIN AI surge para <strong>quebrar esse ciclo</strong>, trazendo uma alternativa real.</p>
+            
             <ul>
-                <li>⏳ **Poupa Tempo:** O LUMIN automatiza tarefas diárias, para que te foques no que realmente importa.</li>
-                <li>💰 **Poupa Dinheiro:** Encontra as melhores opções e **elimina desperdícios**.</li>
-                <li>🔍 **Transparência Total:** Sem manipulação, sem truques – só a verdade e os melhores caminhos para ti.</li>
-                <li>🤖 **Tecnologia ao Teu Serviço:** IA que te entende, aprende contigo e melhora a tua vida.</li>
+                <li>⏳ <strong>Poupa Tempo:</strong> O LUMIN automatiza tarefas diárias, para que te foques no que realmente importa.</li>
+                <li>💰 <strong>Poupa Dinheiro:</strong> Encontra as melhores opções e <strong>elimina desperdícios</strong>.</li>
+                <li>🔍 <strong>Transparência Total:</strong> Sem manipulação, sem truques – só a verdade e os melhores caminhos para ti.</li>
+                <li>🤖 <strong>Tecnologia ao Teu Serviço:</strong> IA que te entende, aprende contigo e melhora a tua vida.</li>
             </ul>
         </section>
 
-        <section class="sobre-motivos">
+        <!-- Razões para Aderir -->
+        <section class="porque-aderir">
             <h2>⚡ Porque Deves Aderir?</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>🔗 Liberta-te do Sistema</h3>
-                    <p>Já imaginaste um mundo onde não precisas de te preocupar com **faturas, taxas escondidas ou contratos abusivos**?</p>
-                </div>
-                <div class="card">
-                    <h3>🧠 IA que Trabalha Para Ti</h3>
-                    <p>O LUMIN AI gere as tuas escolhas, **ajuda-te a poupar e aumenta a tua produtividade** automaticamente.</p>
-                </div>
-                <div class="card">
-                    <h3>🚀 Um Novo Ecossistema</h3>
-                    <p>Junta-te a um **movimento global** que transforma a forma como usamos tecnologia e inteligência artificial.</p>
-                </div>
-            </div>
+            
+            <h3>🔗 Liberta-te do Sistema</h3>
+            <p>Já imaginaste um mundo onde não precisas de te preocupar com <strong>faturas, taxas escondidas ou contratos abusivos</strong>?</p>
+
+            <h3>🧠 IA que Trabalha Para Ti</h3>
+            <p>O LUMIN AI gere as tuas escolhas, <strong>ajuda-te a poupar e aumenta a tua produtividade</strong> automaticamente.</p>
+
+            <h3>🚀 Um Novo Ecossistema</h3>
+            <p>Junta-te a um <strong>movimento global</strong> que transforma a forma como usamos tecnologia e inteligência artificial.</p>
         </section>
 
-        <section class="sobre-equipa">
+        <!-- Quem está por trás -->
+        <section class="quem-somos">
             <h2>👥 Quem Está por Trás do LUMIN AI?</h2>
-            <p>O LUMIN AI foi criado por pessoas que acreditam que **o futuro pode ser diferente**. A nossa missão é construir um sistema onde todos **tenham controlo sobre as suas finanças, o seu tempo e a sua vida**.</p>
-            <p>Não somos apenas programadores – somos **visionários**.</p>
+            <p>O LUMIN AI foi criado por pessoas que acreditam que <strong>o futuro pode ser diferente</strong>. A nossa missão é construir um sistema onde todos <strong>tenham controlo sobre as suas finanças, o seu tempo e a sua vida</strong>.</p>
         </section>
 
-        <section class="cta-section">
+        <!-- Chamada para ação -->
+        <section class="chamada">
             <h2>🔥 Queres Fazer Parte Disto?</h2>
-            <p>O **LUMIN AI está a crescer** e a transformar vidas. Junta-te agora e **torna-te um dos pioneiros** desta revolução!</p>
-            <div class="botoes-cta">
-                <a href="7lumins.html" class="botao-explorar">Explorar os Lumins</a>
-                <a href="compra.html" class="botao-compra">Comprar Agora</a>
-            </div>
+            <p>O <strong>LUMIN AI está a crescer</strong> e a transformar vidas. Junta-te agora e <strong>torna-te um dos pioneiros</strong> desta revolução!</p>
+            <a href="7lumins.html" class="botao">🔍 Explorar os Lumins</a>
+            <a href="compra.html" class="botao vip">🛒 Comprar Agora</a>
         </section>
+
     </main>
 
     <script>
-        function narrarSobre() {
-            let mensagem = "O LUMIN AI não é apenas tecnologia – é um movimento. Criámos um ecossistema onde inteligência artificial, liberdade financeira e automação trabalham a favor do ser humano. Queremos um mundo onde as pessoas tenham tempo para viver, criar e inovar. Junta-te agora à revolução.";
-            let speech = new SpeechSynthesisUtterance(mensagem);
-            speech.lang = "pt-PT";
-            speech.rate = 1;
-            speech.pitch = 1.1; 
-            speech.volume = 1;
-            speechSynthesis.speak(speech);
+        function narrarTexto() {
+            let texto = "O LUMIN AI é um movimento de inteligência artificial criado para libertar as pessoas do sistema financeiro opressivo. Automatiza tarefas, reduz desperdícios e aumenta a produtividade, tornando o mundo mais acessível, justo e eficiente.";
+            let utterance = new SpeechSynthesisUtterance(texto);
+            utterance.lang = "pt-PT";
+            speechSynthesis.speak(utterance);
         }
     </script>
 
