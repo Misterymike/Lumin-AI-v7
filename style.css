@@ -1,38 +1,69 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('Fundo Ai.webp') no-repeat center center fixed; /* Adicionando a imagem de fundo */
-    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+    background: url('Fundo Ai.webp') no-repeat center center fixed;
+    background-size: cover;
     color: white;
     text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
 header {
-    background: #111;
-    padding: 10px;
+    background: rgba(0, 0, 0, 0.85); /* Fundo escuro semi-transparente */
+    padding: 15px;
+    color: white;
 }
 
 nav a {
-    color: cyan;
+    color: #00FFFF; /* Azul ciano para visibilidade */
+    font-weight: bold;
     margin: 10px;
     text-decoration: none;
 }
 
-button {
-    background: cyan;
-    color: black;
-    border: none;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
+nav a:hover {
+    color: #FFD700; /* Dourado ao passar o mouse */
+}
+
+h1, h2, h3 {
+    color: #FFD700; /* Dourado para destaque */
+    text-shadow: 2px 2px 4px black; /* Sombra para realce */
+}
+
+p {
+    color: #F8F8FF; /* Branco suave para não agredir a visão */
+    text-shadow: 1px 1px 3px black;
 }
 
 #chatbot {
     margin-top: 20px;
-    background: #222;
+    background: rgba(34, 34, 34, 0.9); /* Fundo escuro semi-transparente */
     padding: 15px;
     border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+input {
+    background-color: #333;
+    color: white;
+    border: 1px solid #FFD700;
+    padding: 8px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+button {
+    background: #00FFFF;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #FFD700;
+    color: black;
 }
 
 .lumin-container {
@@ -44,17 +75,39 @@ button {
 }
 
 .lumin {
-    background-color: #1c1c1c;
+    background-color: rgba(28, 28, 28, 0.9);
     color: white;
-    width: 300px;
+    width: 320px;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
 .lumin img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Ajustes para botões de controle de música */
+#music-controls {
+    margin-top: 15px;
+}
+
+.music-button {
+    background: #00A1A1;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.music-button:hover {
+    background: #FFD700;
+    color: black;
 }
