@@ -5,68 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUMIN AI - Revolução da IA</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        // Tocar música de fundo com volume ajustado (somente na página inicial)
-        var audio;
-        if (window.location.pathname === '/index.html') {
-            audio = new Audio('lumin_ai_music_fixed.mp3');
-            audio.loop = true;
-            audio.volume = 0.1;  // Ajustando o volume da música para não sobrepor a narração
-            audio.play();
-        }
-
-        // Função de narração de introdução ao carregar a página
-        function narrarIntroducao() {
-            const mensagem = "Bem-vindo aos Lumins AI! Escolha o plano que melhor se adapta às suas necessidades.";
-            const msg = new SpeechSynthesisUtterance(mensagem);
-            msg.lang = 'pt-PT';
-            window.speechSynthesis.speak(msg);
-        }
-
-        // Função de narração para os Lumins
-        function narrarLumin(nome, descricao) {
-            const mensagem = `Apresentando o ${nome}. ${descricao}`;
-            const msg = new SpeechSynthesisUtterance(mensagem);
-            msg.lang = 'pt-PT';
-            window.speechSynthesis.speak(msg);
-        }
-
-        // Função para pausar a música
-        function pausarMusica() {
-            if (audio) audio.pause();
-        }
-
-        // Função para retomar a música
-        function retomarMusica() {
-            if (audio) audio.play();
-        }
-
-        // Função para aumentar o volume da música
-        function aumentarVolume() {
-            if (audio && audio.volume < 1) {
-                audio.volume += 0.1;
-            }
-        }
-
-        // Função para diminuir o volume da música
-        function diminuirVolume() {
-            if (audio && audio.volume > 0) {
-                audio.volume -= 0.1;
-            }
-        }
-    </script>
+    <script src="chatbot.js" defer></script>
 </head>
 <body onload="narrarIntroducao()">
-    <!-- Música de fundo com controle de volume via JavaScript -->
+
+    <!-- Música de fundo -->
     <audio id="backgroundMusic" autoplay loop>
         <source src="lumin_ai_music_fixed.mp3" type="audio/mp3">
     </audio>
 
     <header>
-        <h1>Bem-vindo ao LUMIN AI!</h1>
+        <h1>🚀 Bem-vindo ao LUMIN AI!</h1>
         <nav>
             <a href="index.html">Início</a>
-            <a href="7-lumins.html">Os 7 Lumins</a> <!-- Link para a página dos Lumins -->
+            <a href="7-lumins.html">Os 7 Lumins</a>
             <a href="sobre.html">Sobre</a>
             <a href="testemunhos.html">Testemunhos</a>
             <a href="faq.html">FAQ</a>
@@ -75,82 +27,115 @@
     </header>
 
     <main>
-        <h2>Descubra as funcionalidades poderosas do LUMIN AI!</h2>
-        <p>Escolha um plano e aproveite os nossos Lumins AI interativos.</p>
+        <h2>Transforma o teu futuro com Inteligência Artificial!</h2>
+        <p>Explora os Lumins AI e escolhe o melhor plano para ti.</p>
 
-        <!-- Caixa de texto para interagir com o LUMIN AI -->
+        <!-- Caixa de interação com o LUMIN AI -->
         <div id="chatbox">
-            <h3>Tem dúvidas? Pergunte ao LUMIN AI!</h3>
-            <input type="text" id="userInput" placeholder="Digite sua pergunta..." onkeyup="checkInput(event)">
+            <h3>💬 Fala com o LUMIN AI!</h3>
+            <input type="text" id="userInput" placeholder="Escreve a tua pergunta..." onkeyup="checkInput(event)">
             <button onclick="sendUserInput()">Enviar Pergunta</button>
             <div id="chatResponse"></div>
+
+            <!-- Perguntas rápidas -->
+            <div class="quick-questions">
+                <button onclick="preencherPergunta('O que é LUMIN AI?')">O que é LUMIN AI?</button>
+                <button onclick="preencherPergunta('Quais são os planos?')">Quais são os planos?</button>
+                <button onclick="preencherPergunta('Como comprar?')">Como comprar?</button>
+                <button onclick="preencherPergunta('Quais são os Lumins?')">Quais são os Lumins?</button>
+            </div>
         </div>
 
         <!-- Controles de música -->
         <div id="musicControls">
-            <button onclick="pausarMusica()">Pausar Música</button>
-            <button onclick="retomarMusica()">Retomar Música</button>
-            <button onclick="aumentarVolume()">Aumentar Volume</button>
-            <button onclick="diminuirVolume()">Diminuir Volume</button>
+            <button onclick="toggleMusic()">🎵 Pausar/Retomar Música</button>
+            <button onclick="aumentarVolume()">🔊 Aumentar Volume</button>
+            <button onclick="diminuirVolume()">🔉 Diminuir Volume</button>
         </div>
     </main>
 
     <script>
-        // Ajuste de volume da música de fundo com JavaScript
-        var backgroundMusic = document.getElementById('backgroundMusic');
-        backgroundMusic.volume = 0.1; // Volume 10% para não interferir com a narração
+        var audio = document.getElementById("backgroundMusic");
+        audio.volume = 0.1; // Volume inicial reduzido
 
-        // Função de boas-vindas com narração
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function aumentarVolume() {
+            if (audio.volume < 1) {
+                audio.volume += 0.1;
+            }
+        }
+
+        function diminuirVolume() {
+            if (audio.volume > 0) {
+                audio.volume -= 0.1;
+            }
+        }
+
         function narrarIntroducao() {
-            // Narra a introdução ao carregar a página
-            const mensagem = "Bem-vindo ao LUMIN AI! Escolha um dos Lumins e comece a explorar as funcionalidades incríveis que temos para você.";
+            const mensagem = "Bem-vindo ao LUMIN AI! Descobre como a inteligência artificial pode mudar a tua vida.";
             const msg = new SpeechSynthesisUtterance(mensagem);
             msg.lang = 'pt-PT';
             window.speechSynthesis.speak(msg);
 
-            // Mensagem impactante ao abrir o site
-            setTimeout(function() {
-                const mensagemImpactante = "Aqui, a inteligência artificial vai transformar a sua forma de viver e trabalhar. Prepare-se para o futuro!";
-                const msgImpactante = new SpeechSynthesisUtterance(mensagemImpactante);
+            setTimeout(() => {
+                const impactante = "Aqui, a IA não é apenas tecnologia, é uma revolução. Prepara-te!";
+                const msgImpactante = new SpeechSynthesisUtterance(impactante);
                 msgImpactante.lang = 'pt-PT';
                 window.speechSynthesis.speak(msgImpactante);
-            }, 2000); // Aguardar 2 segundos antes de começar a mensagem impactante
+            }, 2500);
         }
 
-        // Função para interagir com o LUMIN AI através da caixa de texto
+        function preencherPergunta(pergunta) {
+            document.getElementById("userInput").value = pergunta;
+            sendUserInput();
+        }
+
         function sendUserInput() {
-            const userInput = document.getElementById('userInput').value.toLowerCase();
-            const chatResponse = document.getElementById('chatResponse');
+            const userInput = document.getElementById("userInput").value.toLowerCase();
+            const chatResponse = document.getElementById("chatResponse");
             let responseText = '';
 
-            // LUMIN AI responde com base na entrada do usuário
-            if (["olá", "oi", "bom dia", "boa tarde", "boa noite"].includes(userInput)) {
-                responseText = "Olá! Como posso ajudar-te hoje? 😊";
-            } else if (userInput.includes('lumin ai')) {
-                responseText = 'LUMIN AI é um assistente virtual projetado para ajudar na automatização e eficiência financeira. Descobre os nossos serviços.';
-            } else if (userInput.includes('planos')) {
-                responseText = 'Os nossos planos incluem mensal, anual e vitalício. Escolha o que melhor se adapta às suas necessidades.';
-            } else {
-                responseText = 'Desculpe, não entendi. Podes reformular a pergunta?';
-            }
+            const respostas = {
+                "olá": "Olá! Como posso ajudar-te hoje? 😊",
+                "oi": "Oi! Que dúvida tens sobre o LUMIN AI?",
+                "bom dia": "Bom dia! Estás pronto para explorar a revolução da IA?",
+                "boa tarde": "Boa tarde! Como posso ajudar-te?",
+                "boa noite": "Boa noite! Tens alguma dúvida sobre os Lumins AI?",
+                "lumin ai": "O LUMIN AI é um assistente inteligente que melhora a tua produtividade e gestão financeira.",
+                "planos": "Os planos incluem mensal, anual e vitalício. Escolhe o que mais se adapta às tuas necessidades!",
+                "preço": "Os planos básicos variam entre 200€ por mês e 20.000€ para um acesso vitalício.",
+                "lumins": "Existem 7 Lumins AI diferentes, cada um especializado em uma área. Podes conhecê-los na página dedicada!",
+                "compra": "Para adquirir um plano, basta clicar no botão 'Comprar Agora' e escolher a melhor opção para ti."
+            };
+
+            responseText = respostas[userInput] || "Desculpa, não entendi. Podes reformular a pergunta?";
 
             chatResponse.innerHTML = `<p><strong>LUMIN AI:</strong> ${responseText}</p>`;
 
             // Narração da resposta
-            const msg = new SpeechSynthesisUtterance(responseText);
-            msg.lang = 'pt-PT';
-            window.speechSynthesis.speak(msg);
-
-            // Limpar a caixa de entrada
+            narrarResposta(responseText);
             document.getElementById('userInput').value = '';
         }
 
-        // Função para verificar se o usuário digitou algo na caixa de texto
+        function narrarResposta(texto) {
+            const msg = new SpeechSynthesisUtterance(texto);
+            msg.lang = "pt-PT";
+            window.speechSynthesis.speak(msg);
+        }
+
         function checkInput(event) {
-            if (event.key === 'Enter') {
+            if (event.key === "Enter") {
                 sendUserInput();
             }
         }
     </script>
+
 </body>
 </html>
