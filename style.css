@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('fundo-ai.webp') no-repeat center center fixed;
+    background: url('Fundo Ai.webp') no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
@@ -19,6 +19,20 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover {
+    color: #FFD700;
+}
+
+h1, h2, h3 {
+    color: #FFD700;
+    text-shadow: 2px 2px 4px black;
+}
+
+p {
+    color: #F8F8FF;
+    text-shadow: 1px 1px 3px black;
+}
+
 .lumin-container {
     display: flex;
     flex-wrap: wrap;
@@ -35,43 +49,48 @@ nav a {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out;
 }
 
-.lumin-card:hover {
-    transform: scale(1.05);
+.lumin-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
-.botao {
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.botao-basico, .botao-vip {
     display: inline-block;
+    padding: 8px;
     margin: 5px;
-    padding: 10px;
     border-radius: 5px;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.basico {
+.botao-basico {
     background: #00A1A1;
     color: white;
 }
 
-.vip {
+.botao-vip {
     background: #FFD700;
     color: black;
 }
 
-.narrar {
-    background: #FFA500;
-    color: white;
+button {
+    background: #00FFFF;
+    color: black;
     font-weight: bold;
-    padding: 10px;
     border-radius: 5px;
-    cursor: pointer;
+    padding: 10px;
     border: none;
-}
-
-.pagamento-seguro {
-    margin-top: 20px;
-    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
 }
