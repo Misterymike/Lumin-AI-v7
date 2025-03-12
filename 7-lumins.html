@@ -28,7 +28,7 @@
         <h2>Conheça os Lumins AI!</h2>
         <div class="lumin-container">
             <!-- LUMIN AI Financeiro (VIP) -->
-            <div class="lumin" id="lumin-financeiro">
+            <div class="lumin" id="lumin-financeiro" onclick="narrarLumin('Financeiro', 'Analisa o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.')">
                 <img src="Lumin AI segurança e saude.webp" alt="LUMIN AI Financeiro">
                 <h3>💰 LUMIN AI Financeiro</h3>
                 <button onclick="redirecionarPagamento('VIP', 'Mensal')">Plano VIP Mensal</button>
@@ -37,7 +37,7 @@
             </div>
 
             <!-- LUMIN AI Assistente (VIP) -->
-            <div class="lumin" id="lumin-assistente">
+            <div class="lumin" id="lumin-assistente" onclick="narrarLumin('Assistente', 'Organiza a tua agenda, define lembretes e melhora a tua produtividade com o LUMIN AI Assistente.')">
                 <img src="Lumin AI Vision.webp" alt="LUMIN AI Assistente">
                 <h3>🤖 LUMIN AI Assistente</h3>
                 <button onclick="redirecionarPagamento('VIP', 'Mensal')">Plano VIP Mensal</button>
@@ -46,7 +46,7 @@
             </div>
 
             <!-- LUMIN AI Agent (VIP) -->
-            <div class="lumin" id="lumin-agent">
+            <div class="lumin" id="lumin-agent" onclick="narrarLumin('Agent', 'Desenvolva projetos de IA com o LUMIN AI Agent, ideal para programadores e desenvolvedores.')">
                 <img src="Lumin AI Central(1).webp" alt="LUMIN AI Agent">
                 <h3>🛠️ LUMIN AI Agent</h3>
                 <button onclick="redirecionarPagamento('VIP', 'Mensal')">Plano VIP Mensal</button>
@@ -55,7 +55,7 @@
             </div>
 
             <!-- LUMIN AI Recycle (Normal) -->
-            <div class="lumin" id="lumin-recycle">
+            <div class="lumin" id="lumin-recycle" onclick="narrarLumin('Recycle', 'Promove a sustentabilidade ajudando a gerir resíduos e reciclagem de forma inteligente.')">
                 <img src="Lumin AI segurança e saude.webp" alt="LUMIN AI Recycle">
                 <h3>♻️ LUMIN AI Recycle</h3>
                 <button onclick="redirecionarPagamento('Normal', 'Mensal')">Plano Normal Mensal</button>
@@ -64,7 +64,7 @@
             </div>
 
             <!-- LUMIN AI Vision (Normal) -->
-            <div class="lumin" id="lumin-vision">
+            <div class="lumin" id="lumin-vision" onclick="narrarLumin('Vision', 'Utiliza tecnologia de visão computacional para ajudar na acessibilidade e análise de imagens.')">
                 <img src="Lumin AI Vision.webp" alt="LUMIN AI Vision">
                 <h3>👁️ LUMIN AI Vision</h3>
                 <button onclick="redirecionarPagamento('Normal', 'Mensal')">Plano Normal Mensal</button>
@@ -96,6 +96,14 @@
                     window.location.href = "https://buy.stripe.com/aEUdRH4Y20A2bBecMT"; // Normal Vitalício
                 }
             }
+        }
+
+        // Função para narrar as funcionalidades de cada Lumin
+        function narrarLumin(nome, descricao) {
+            const mensagem = `Apresentando o ${nome}. ${descricao}`;
+            const msg = new SpeechSynthesisUtterance(mensagem);
+            msg.lang = 'pt-PT';
+            window.speechSynthesis.speak(msg);
         }
 
         // Função de narração de introdução ao carregar a página
