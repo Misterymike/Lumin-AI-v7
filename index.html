@@ -6,11 +6,14 @@
     <title>LUMIN AI - Revolução da IA</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        // Tocar música de fundo com volume ajustado
-        var audio = new Audio('lumin_ai_music_fixed.mp3');
-        audio.loop = true;
-        audio.volume = 0.1;  // Ajustando o volume da música para não sobrepor a narração
-        audio.play();
+        // Tocar música de fundo com volume ajustado (somente na página inicial)
+        var audio;
+        if (window.location.pathname === '/index.html') {
+            audio = new Audio('lumin_ai_music_fixed.mp3');
+            audio.loop = true;
+            audio.volume = 0.1;  // Ajustando o volume da música para não sobrepor a narração
+            audio.play();
+        }
 
         // Função de narração de introdução ao carregar a página
         function narrarIntroducao() {
@@ -30,30 +33,30 @@
 
         // Função para pausar a música
         function pausarMusica() {
-            audio.pause();
+            if (audio) audio.pause();
         }
 
         // Função para retomar a música
         function retomarMusica() {
-            audio.play();
+            if (audio) audio.play();
         }
 
         // Função para aumentar o volume da música
         function aumentarVolume() {
-            if (audio.volume < 1) {
+            if (audio && audio.volume < 1) {
                 audio.volume += 0.1;
             }
         }
 
         // Função para diminuir o volume da música
         function diminuirVolume() {
-            if (audio.volume > 0) {
+            if (audio && audio.volume > 0) {
                 audio.volume -= 0.1;
             }
         }
     </script>
 </head>
-<body onload="narrarBoasVindas()">
+<body onload="narrarIntroducao()">
     <!-- Música de fundo com controle de volume via JavaScript -->
     <audio id="backgroundMusic" autoplay loop>
         <source src="lumin_ai_music_fixed.mp3" type="audio/mp3">
@@ -98,7 +101,7 @@
         backgroundMusic.volume = 0.1; // Volume 10% para não interferir com a narração
 
         // Função de boas-vindas com narração
-        function narrarBoasVindas() {
+        function narrarIntroducao() {
             // Narra a introdução ao carregar a página
             const mensagem = "Bem-vindo ao LUMIN AI! Escolha um dos Lumins e comece a explorar as funcionalidades incríveis que temos para você.";
             const msg = new SpeechSynthesisUtterance(mensagem);
