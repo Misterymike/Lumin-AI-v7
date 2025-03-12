@@ -1,18 +1,85 @@
-.botao-compra {
-    display: inline-block;
-    padding: 8px 15px;
-    margin-top: 10px;
-    background-color: #00FFFF;
-    color: black;
+body {
+    font-family: Arial, sans-serif;
+    background: url('Fundo_AI.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.85); /* Fundo escuro semi-transparente */
+    padding: 15px;
+    color: white;
+}
+
+nav a {
+    color: #00FFFF; /* Azul ciano para visibilidade */
     font-weight: bold;
-    border-radius: 5px;
+    margin: 10px;
     text-decoration: none;
 }
 
-.botao-compra.vip {
-    background-color: #FFD700;
+nav a:hover {
+    color: #FFD700; /* Dourado ao passar o mouse */
+}
+
+h1, h2, h3 {
+    color: #FFD700; /* Dourado para destaque */
+    text-shadow: 2px 2px 4px black; /* Sombra para realce */
+}
+
+p {
+    color: #F8F8FF; /* Branco suave para não agredir a visão */
+    text-shadow: 1px 1px 3px black;
+}
+
+/* Estilo dos Lumins */
+.lumin-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.lumin-card {
+    background-color: rgba(28, 28, 28, 0.9);
+    color: white;
+    width: 320px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.lumin-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo dos Botões */
+.botao-compra {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background: #00A1A1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .botao-compra:hover {
-    opacity: 0.8;
+    background: #FFD700;
+    color: black;
+}
+
+.botao-compra.vip {
+    background: #FF4500;
+}
+
+.botao-compra.vip:hover {
+    background: #FF6347;
 }
