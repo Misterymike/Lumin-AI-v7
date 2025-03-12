@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="chatbot.js" defer></script>
 </head>
 <body>
+
     <header>
         <h1>🔷 Os 7 Lumins AI</h1>
         <nav>
@@ -21,98 +22,61 @@
 
     <main>
         <h2>Conheça os Lumins AI!</h2>
+
         <div class="lumin-container">
-            
-            <!-- LUMIN AI Financeiro -->
-            <div class="lumin">
-                <img src="Lumin Ai FINANCEIRO.webp" alt="LUMIN AI Financeiro">
+            <!-- LUMIN AI FINANCEIRO -->
+            <div class="lumin" onclick="narrarLumin('LUMIN AI Financeiro', 'Gestão de investimentos e planejamento financeiro avançado.')">
+                <img src="Lumin AI FINANCEIRO.webp" alt="LUMIN AI Financeiro">
                 <h3>💰 LUMIN AI Financeiro</h3>
-                <p>Analisa o mercado financeiro e ajuda a maximizar os investimentos.</p>
-                <ul>
-                    <li>📊 Monitorização de criptomoedas e bolsa de valores</li>
-                    <li>💹 Previsão de tendências financeiras</li>
-                    <li>📈 Planeamento de investimentos</li>
-                </ul>
-                <button onclick="narrarLumin('LUMIN AI Financeiro', 'Ajuda a maximizar seus investimentos e prever tendências do mercado!')">🔊 Ouvir</button>
-                <div class="planos">
-                    <button onclick="window.location.href='https://buy.stripe.com/3cs3d3aim5Um8p2002'">Plano VIP Mensal</button>
-                    <button onclick="window.location.href='https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn'">Plano VIP Anual</button>
-                    <button onclick="window.location.href='https://buy.stripe.com/aEUbJz4Y2eqSgVybIM'">Plano VIP Vitalício</button>
-                </div>
+                <p>Gestão de investimentos, previsão de tendências e planejamento financeiro.</p>
+                <a href="https://buy.stripe.com/3cs3d3aim5Um8p2002" class="btn">Plano VIP Mensal</a>
+                <a href="https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn" class="btn">Plano VIP Anual</a>
+                <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="btn">Plano VIP Vitalício</a>
             </div>
 
-            <!-- LUMIN AI Assistente -->
-            <div class="lumin">
-                <img src="Lumin Ai Assistente.webp" alt="LUMIN AI Assistente">
-                <h3>🤖 LUMIN AI Assistente</h3>
-                <p>O teu assistente pessoal para produtividade e organização.</p>
-                <ul>
-                    <li>📅 Gestão de tarefas e agenda</li>
-                    <li>📑 Automatização de processos</li>
-                    <li>🔍 Pesquisa de informações em tempo real</li>
-                </ul>
-                <button onclick="narrarLumin('LUMIN AI Assistente', 'Facilita a tua vida com gestão de tarefas e automação!')">🔊 Ouvir</button>
-                <div class="planos">
-                    <button onclick="window.location.href='https://buy.stripe.com/4gw7tj76a82uaxa8wB'">Plano Básico Mensal</button>
-                    <button onclick="window.location.href='https://buy.stripe.com/bIYbJz8ae4QieNq28e'">Plano Básico Anual</button>
-                    <button onclick="window.location.href='https://buy.stripe.com/aEUdRH4Y20A2bBecMT'">Plano Básico Vitalício</button>
-                </div>
-            </div>
-
-            <!-- LUMIN AI Vision -->
-            <div class="lumin">
-                <img src="Lumin Ai Vision.webp" alt="LUMIN AI Vision">
-                <h3>👁️ LUMIN AI Vision</h3>
-                <p>Utiliza inteligência artificial para análise visual e acessibilidade.</p>
-                <ul>
-                    <li>📷 Reconhecimento de imagens</li>
-                    <li>🦾 Ajuda para deficientes visuais</li>
-                    <li>🎥 Análise de vídeos em tempo real</li>
-                </ul>
-                <button onclick="narrarLumin('LUMIN AI Vision', 'Reconhece imagens, vídeos e ajuda na acessibilidade!')">🔊 Ouvir</button>
-            </div>
-
-            <!-- LUMIN AI Security -->
-            <div class="lumin">
-                <img src="Lumin Ai segurança.webp" alt="LUMIN AI Security">
-                <h3>🔒 LUMIN AI Security</h3>
-                <p>Protege os teus dados contra ameaças cibernéticas.</p>
-                <ul>
-                    <li>🛡️ Detecção de ameaças em tempo real</li>
-                    <li>🔑 Gestão de senhas e autenticação segura</li>
-                    <li>🕵️‍♂️ Monitorização da dark web</li>
-                </ul>
-                <button onclick="narrarLumin('LUMIN AI Security', 'Protege os teus dados contra ameaças e vazamentos!')">🔊 Ouvir</button>
-            </div>
-
-            <!-- LUMIN AI Recycle -->
-            <div class="lumin">
-                <img src="Lumin Ai Recicle.webp" alt="LUMIN AI Recycle">
+            <!-- LUMIN AI RECYCLE -->
+            <div class="lumin" onclick="narrarLumin('LUMIN AI Recycle', 'Ajuda na identificação e gestão de materiais recicláveis.')">
+                <img src="Lumin AI Recicle.webp" alt="LUMIN AI Recycle">
                 <h3>♻️ LUMIN AI Recycle</h3>
-                <p>Promove práticas de sustentabilidade e reciclagem inteligente.</p>
-                <ul>
-                    <li>🌱 Identificação de materiais recicláveis</li>
-                    <li>♻️ Recomendações de descarte correto</li>
-                    <li>🚮 Conexão com serviços de reciclagem</li>
-                </ul>
-                <button onclick="narrarLumin('LUMIN AI Recycle', 'Ajuda-te a reciclar e ser mais sustentável!')">🔊 Ouvir</button>
+                <p>Ajuda na reciclagem com identificação de materiais e conexões com serviços.</p>
+                <button onclick="narrarLumin('LUMIN AI Recycle', 'Ajuda na identificação e gestão de materiais recicláveis.')">🔊 Ouvir</button>
             </div>
 
-            <!-- LUMIN AI Educador -->
-            <div class="lumin">
-                <img src="Lumin Ai Educador.webp" alt="LUMIN AI Educador">
+            <!-- LUMIN AI EDUCADOR -->
+            <div class="lumin" onclick="narrarLumin('LUMIN AI Educador', 'Sugestão de cursos, materiais e acompanhamento de estudo.')">
+                <img src="Lumin AI Assistente.webp" alt="LUMIN AI Educador">
                 <h3>📚 LUMIN AI Educador</h3>
-                <p>Facilita a aprendizagem com recomendações personalizadas.</p>
-                <ul>
-                    <li>🎓 Sugestão de cursos e materiais</li>
-                    <li>📖 Acompanhamento do progresso de estudo</li>
-                    <li>🤖 Resumo automático de conteúdos</li>
-                </ul>
-                <button onclick="narrarLumin('LUMIN AI Educador', 'Ajuda-te a aprender mais rápido e de forma eficiente!')">🔊 Ouvir</button>
+                <p>Facilita o aprendizado com recomendações personalizadas.</p>
+                <button onclick="narrarLumin('LUMIN AI Educador', 'Sugestão de cursos, materiais e acompanhamento de estudo.')">🔊 Ouvir</button>
             </div>
 
+            <!-- LUMIN AI VISION -->
+            <div class="lumin" onclick="narrarLumin('LUMIN AI Vision', 'Reconhecimento de imagens e acessibilidade para deficientes visuais.')">
+                <img src="Lumin AI Vision.webp" alt="LUMIN AI Vision">
+                <h3>👁️ LUMIN AI Vision</h3>
+                <p>Análise visual e acessibilidade para pessoas com deficiência.</p>
+                <button onclick="narrarLumin('LUMIN AI Vision', 'Reconhecimento de imagens e acessibilidade para deficientes visuais.')">🔊 Ouvir</button>
+            </div>
+
+            <!-- LUMIN AI SECURITY -->
+            <div class="lumin" onclick="narrarLumin('LUMIN AI Security', 'Monitoramento da dark web e proteção contra ameaças.')">
+                <img src="Lumin AI segurança.webp" alt="LUMIN AI Security">
+                <h3>🔐 LUMIN AI Security</h3>
+                <p>Proteção cibernética contra ameaças e vazamento de dados.</p>
+                <button onclick="narrarLumin('LUMIN AI Security', 'Monitoramento da dark web e proteção contra ameaças.')">🔊 Ouvir</button>
+            </div>
         </div>
     </main>
+
+    <script>
+        // Função para narração
+        function narrarLumin(nome, descricao) {
+            const mensagem = `Apresentamos o ${nome}. ${descricao}`;
+            const msg = new SpeechSynthesisUtterance(mensagem);
+            msg.lang = 'pt-PT';
+            window.speechSynthesis.speak(msg);
+        }
+    </script>
 
 </body>
 </html>
