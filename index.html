@@ -32,4 +32,53 @@
             <button onclick="sendQuestion('O que é LUMIN AI?')">O que é LUMIN AI?</button>
             <button onclick="sendQuestion('Como posso ganhar dinheiro com IA?')">Como posso ganhar dinheiro com IA?</button>
             <button onclick="sendQuestion('Quais são as vantagens da IA?')">Quais são as vantagens da IA?</button>
-            <input type="text" id="userInput"
+            <input type="text" id="userInput" placeholder="Escreve a tua pergunta..." onkeyup="checkInput(event)">
+            <button onclick="sendUserInput()">Enviar</button>
+            <div id="chatResponse"></div>
+        </section>
+    </main>
+
+    <script>
+        // Função para narrar a introdução ao carregar a página
+        function narrarBoasVindas() {
+            const mensagem = "Bem-vindo ao LUMIN AI. A inteligência artificial verdadeira. Descobre como a IA pode transformar a tua vida.";
+            const msg = new SpeechSynthesisUtterance(mensagem);
+            msg.lang = 'pt-PT';
+            window.speechSynthesis.speak(msg);
+        }
+
+        // Função para interagir com o chatbot ao clicar nos botões
+        function sendQuestion(question) {
+            const chatResponse = document.getElementById('chatResponse');
+            chatResponse.innerHTML = `<p><strong>LUMIN AI:</strong> ${question}</p>`;
+            narrarResposta(question);
+        }
+
+        // Função para enviar a entrada do usuário e interagir com o chatbot
+        function sendUserInput() {
+            const userInput = document.getElementById('userInput').value;
+            const chatResponse = document.getElementById('chatResponse');
+            if (userInput) {
+                chatResponse.innerHTML = `<p><strong>Você:</strong> ${userInput}</p>`;
+                narrarResposta(userInput);
+                document.getElementById('userInput').value = ''; // Limpar a caixa de texto após enviar
+            }
+        }
+
+        // Função para verificar se o usuário digitou algo na caixa de texto
+        function checkInput(event) {
+            if (event.key === 'Enter') {
+                sendUserInput();
+            }
+        }
+
+        // Função para narrar a resposta
+        function narrarResposta(resposta) {
+            const msg = new SpeechSynthesisUtterance(resposta);
+            msg.lang = 'pt-PT';
+            window.speechSynthesis.speak(msg);
+        }
+    </script>
+
+</body>
+</html>
