@@ -8,8 +8,8 @@
     <script src="chatbot.js" defer></script>
 </head>
 <body onload="narrarBoasVindas()">
-    <!-- Música de fundo -->
-    <audio autoplay loop>
+    <!-- Música de fundo com volume controlado -->
+    <audio autoplay loop volume="0.1">
         <source src="lumin_ai_music_fixed.mp3" type="audio/mp3">
     </audio>
 
@@ -41,6 +41,7 @@
     <script>
         // Função de boas-vindas com narração
         function narrarBoasVindas() {
+            // Narra a introdução ao carregar a página
             const mensagem = "Bem-vindo ao LUMIN AI! Escolha um dos Lumins e comece a explorar as funcionalidades incríveis que temos para você.";
             const msg = new SpeechSynthesisUtterance(mensagem);
             msg.lang = 'pt-PT';
@@ -52,7 +53,7 @@
                 const msgImpactante = new SpeechSynthesisUtterance(mensagemImpactante);
                 msgImpactante.lang = 'pt-PT';
                 window.speechSynthesis.speak(msgImpactante);
-            }, 1000); // Aguardar 1 segundo antes de começar a mensagem impactante
+            }, 2000); // Aguardar 2 segundos antes de começar a mensagem impactante
         }
 
         // Função para interagir com o LUMIN AI através da caixa de texto
