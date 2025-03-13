@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMIN AI - Revolução da Inteligência Artificial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🤖 LUMIN AI - Revolução da Inteligência Artificial</h1>
+        <nav>
+            <a href="#lumins">Conheça os Lumins</a>
+            <a href="#ebook">eBook Inteligência Artificial</a>
+            <a href="#faq">Dúvidas Frequentes</a>
+            <a href="#comprar" class="cta">Comprar Agora</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>🚀 Transforme sua Vida com o LUMIN AI</h2>
+        <p>A nova era da inteligência artificial chegou. Automatize, otimize e expanda suas capacidades com os Lumins AI.</p>
+        <a href="#comprar" class="botao-destaque">Quero Garantir o Meu!</a>
+    </section>
+
+    <section id="lumins" class="produtos">
+        <h2>🛠️ Conheça os Lumins AI</h2>
+
+        <div class="produto">
+            <img src="Lumin_AI_Financeiro.webp" alt="LUMIN AI Financeiro">
+            <h3>💰 LUMIN AI Financeiro</h3>
+            <p>Planeamento financeiro e previsão de tendências.</p>
+            <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-comprar">Comprar - €500</a>
+        </div>
+
+        <div class="produto">
+            <img src="Lumin_AI_Recicle.webp" alt="LUMIN AI Recicle">
+            <h3>♻️ LUMIN AI Recicle</h3>
+            <p>Identificação de materiais e reciclagem inteligente.</p>
+            <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-comprar">Comprar - €500</a>
+        </div>
+
+        <div class="produto">
+            <img src="Lumin_AI_Vision.webp" alt="LUMIN AI Vision">
+            <h3>👁️ LUMIN AI Vision</h3>
+            <p>Suporte visual com reconhecimento de imagens.</p>
+            <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
+        </div>
+
+        <div class="produto">
+            <img src="Lumin_AI_Seguranca.webp" alt="LUMIN AI Segurança">
+            <h3>🔒 LUMIN AI Segurança</h3>
+            <p>Proteção de dados com tecnologia avançada.</p>
+            <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
+        </div>
+    </section>
+
+    <section id="ebook" class="ebook">
+        <h2>📖 eBook - Inteligência Artificial e o LUMIN AI</h2>
+        <p>Aprenda tudo sobre IA e como os Lumins podem transformar sua vida.</p>
+        <a href="https://buy.stripe.com/9AQaFvbmqeqScFicMM" class="botao-comprar">Comprar - €20</a>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>❓ Dúvidas Frequentes</h2>
+        <div class="faq-item">
+            <h3>Como funciona o LUMIN AI?</h3>
+            <p>O LUMIN AI é um sistema avançado de inteligência artificial que otimiza tarefas e processos.</p>
+        </div>
+        <div class="faq-item">
+            <h3>O que recebo ao comprar?</h3>
+            <p>Você terá acesso imediato ao software e suporte especializado.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LUMIN AI - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
