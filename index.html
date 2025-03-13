@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script> <!-- Script de narração -->
+    <script src="narracao.js" defer></script> 
 </head>
 <body>
 
     <header>
         <h1>🔷 Os 7 Lumins AI</h1>
         <nav>
-            <a href="index.html">Voltar à página inicial</a>
+            <a href="index.html">Página Inicial</a>
             <a href="sobre.html">Sobre</a>
             <a href="testemunhos.html">Testemunhos</a>
             <a href="faq.html">FAQ</a>
@@ -30,53 +30,72 @@
                 <img src="Lumin Ai FINANCEIRO.webp" alt="Lumin AI Financeiro" onclick="narrar('LUMIN AI Financeiro', 'Sou o LUMIN AI Financeiro! Posso prever tendências, ajudar em investimentos e otimizar os teus rendimentos para que prosperes financeiramente.')">
                 <h3>💰 LUMIN AI Financeiro</h3>
                 <p>Gestão de investimentos, previsão de tendências e planejamento financeiro.</p>
+                <div class="buttons">
+                    <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-basico">Básico</a>
+                    <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-vip">VIP</a>
+                </div>
             </div>
 
             <!-- LUMIN AI Recicle -->
             <div class="lumin-card">
-                <img src="Lumin Ai Recicle.webp" alt="Lumin AI Recicle" onclick="narrar('LUMIN AI Recicle', 'Sou o LUMIN AI Recicle! Ajudo-te a identificar materiais recicláveis e encontrar os melhores serviços sustentáveis. Juntos, construímos um planeta mais verde!')">
+                <img src="Lumin Ai Recicle.webp" alt="Lumin AI Recicle" onclick="narrar('LUMIN AI Recicle', 'Ajudo a identificar materiais recicláveis e encontrar os melhores serviços sustentáveis! Juntos, construímos um planeta mais verde!')">
                 <h3>♻️ LUMIN AI Recicle</h3>
                 <p>Ajuda na reciclagem com identificação de materiais e conexões com serviços.</p>
+                <div class="buttons">
+                    <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-basico">Básico</a>
+                    <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-vip">VIP</a>
+                </div>
             </div>
 
             <!-- LUMIN AI Vision -->
             <div class="lumin-card">
-                <img src="Lumin AI Vision.webp" alt="Lumin AI Vision" onclick="narrar('LUMIN AI Vision', 'Sou o LUMIN AI Vision! Tenho a capacidade de analisar imagens e vídeos, ajudando pessoas com deficiência visual a compreenderem o mundo ao seu redor.')">
+                <img src="Lumin AI Vision.webp" alt="Lumin AI Vision" onclick="narrar('LUMIN AI Vision', 'Análise de imagens e suporte para deficientes visuais!')">
                 <h3>👁️ LUMIN AI Vision</h3>
                 <p>Reconhecimento de imagens, suporte para deficientes visuais e análise de vídeos.</p>
             </div>
 
-            <!-- LUMIN AI Assistente -->
-            <div class="lumin-card">
-                <img src="Lumin AI Assistente.webp" alt="Lumin AI Assistente" onclick="narrar('LUMIN AI Assistente', 'Sou o LUMIN AI Assistente! Um aliado perfeito para otimizar o teu tempo e aumentar a tua produtividade. Desde agendamentos até lembretes, estou sempre pronto para ajudar!')">
-                <h3>🤖 LUMIN AI Assistente</h3>
-                <p>Assistente pessoal para produtividade e automação de tarefas.</p>
-            </div>
-
             <!-- LUMIN AI Segurança -->
             <div class="lumin-card">
-                <img src="Lumin AI segurança e saude.webp" alt="Lumin AI Segurança" onclick="narrar('LUMIN AI Segurança', 'Sou o LUMIN AI Segurança! Protejo-te contra ameaças digitais, detecto ataques em tempo real e mantenho os teus dados 100% seguros.')">
+                <img src="Lumin AI segurança e saude.webp" alt="Lumin AI Segurança" onclick="narrar('LUMIN AI Segurança', 'Proteção contra ameaças digitais e segurança máxima para os teus dados.')">
                 <h3>🔒 LUMIN AI Segurança</h3>
                 <p>Proteção de dados, detecção de ameaças e segurança digital avançada.</p>
             </div>
 
             <!-- LUMIN AI Music -->
             <div class="lumin-card">
-                <img src="Lumin AI Music.webp" alt="Lumin AI Music" onclick="narrar('LUMIN AI Music', 'Sou o LUMIN AI Music! Personalizo as tuas playlists, descubro novas músicas para ti e crio experiências sonoras únicas.')">
+                <img src="Lumin AI Music.webp" alt="Lumin AI Music" onclick="narrar('LUMIN AI Music', 'Criação e descoberta musical através da inteligência artificial.')">
                 <h3>🎵 LUMIN AI Music</h3>
                 <p>Exploração de música com inteligência artificial e recomendações personalizadas.</p>
             </div>
 
             <!-- LUMIN AI Central -->
             <div class="lumin-card">
-                <img src="Lumin AI Central(1).webp" alt="Lumin AI Central" onclick="narrar('LUMIN AI Central', 'Sou o LUMIN AI Central! O coração do ecossistema, conectando todos os Lumins AI para uma experiência integrada e perfeita.')">
+                <img src="Lumin AI Central(1).webp" alt="Lumin AI Central" onclick="narrar('LUMIN AI Central', 'O núcleo que conecta todos os Lumins AI para uma experiência integrada.')">
                 <h3>🌎 LUMIN AI Central</h3>
-                <p>O núcleo do ecossistema, interligando todos os Lumins para uma experiência completa.</p>
+                <p>O núcleo do ecossistema, interligando todos os Lumins AI.</p>
             </div>
 
         </div>
     </main>
 
-    <script src="chatbot.js"></script> <!-- Chatbot LUMIN AI -->
+    <!-- Chatbot -->
+    <div id="chatbot">
+        <h2>🤖 Fala com o LUMIN AI</h2>
+        <input type="text" id="pergunta" placeholder="Escreve a tua pergunta...">
+        <button onclick="enviarPergunta()">Enviar</button>
+    </div>
+
+    <script>
+        function narrar(nome, descricao) {
+            let mensagem = new SpeechSynthesisUtterance(nome + ". " + descricao);
+            speechSynthesis.speak(mensagem);
+        }
+
+        function enviarPergunta() {
+            let pergunta = document.getElementById("pergunta").value;
+            alert("LUMIN AI responde: " + pergunta);
+        }
+    </script>
+
 </body>
 </html>
