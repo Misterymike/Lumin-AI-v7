@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Os 7 Lumins AI</title>
+    <title>Os 7 Lumins AI - Inteligência Artificial</title>
     <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script> 
 </head>
 <body>
 
@@ -24,78 +23,103 @@
         <h2>✨ Conheça os Lumins AI! ✨</h2>
 
         <div class="lumin-container">
-
-            <!-- LUMIN AI Financeiro -->
             <div class="lumin-card">
-                <img src="Lumin Ai FINANCEIRO.webp" alt="Lumin AI Financeiro" onclick="narrar('LUMIN AI Financeiro', 'Sou o LUMIN AI Financeiro! Posso prever tendências, ajudar em investimentos e otimizar os teus rendimentos para que prosperes financeiramente.')">
+                <img src="Lumin Ai FINANCEIRO.webp" alt="Lumin AI Financeiro">
                 <h3>💰 LUMIN AI Financeiro</h3>
                 <p>Gestão de investimentos, previsão de tendências e planejamento financeiro.</p>
-                <div class="buttons">
-                    <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-basico">Básico</a>
-                    <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-vip">VIP</a>
-                </div>
             </div>
-
-            <!-- LUMIN AI Recicle -->
             <div class="lumin-card">
-                <img src="Lumin Ai Recicle.webp" alt="Lumin AI Recicle" onclick="narrar('LUMIN AI Recicle', 'Ajudo a identificar materiais recicláveis e encontrar os melhores serviços sustentáveis! Juntos, construímos um planeta mais verde!')">
+                <img src="Lumin Ai Recicle.webp" alt="Lumin AI Recicle">
                 <h3>♻️ LUMIN AI Recicle</h3>
                 <p>Ajuda na reciclagem com identificação de materiais e conexões com serviços.</p>
-                <div class="buttons">
-                    <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-basico">Básico</a>
-                    <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-vip">VIP</a>
-                </div>
             </div>
-
-            <!-- LUMIN AI Vision -->
-            <div class="lumin-card">
-                <img src="Lumin AI Vision.webp" alt="Lumin AI Vision" onclick="narrar('LUMIN AI Vision', 'Análise de imagens e suporte para deficientes visuais!')">
-                <h3>👁️ LUMIN AI Vision</h3>
-                <p>Reconhecimento de imagens, suporte para deficientes visuais e análise de vídeos.</p>
-            </div>
-
-            <!-- LUMIN AI Segurança -->
-            <div class="lumin-card">
-                <img src="Lumin AI segurança e saude.webp" alt="Lumin AI Segurança" onclick="narrar('LUMIN AI Segurança', 'Proteção contra ameaças digitais e segurança máxima para os teus dados.')">
-                <h3>🔒 LUMIN AI Segurança</h3>
-                <p>Proteção de dados, detecção de ameaças e segurança digital avançada.</p>
-            </div>
-
-            <!-- LUMIN AI Music -->
-            <div class="lumin-card">
-                <img src="Lumin AI Music.webp" alt="Lumin AI Music" onclick="narrar('LUMIN AI Music', 'Criação e descoberta musical através da inteligência artificial.')">
-                <h3>🎵 LUMIN AI Music</h3>
-                <p>Exploração de música com inteligência artificial e recomendações personalizadas.</p>
-            </div>
-
-            <!-- LUMIN AI Central -->
-            <div class="lumin-card">
-                <img src="Lumin AI Central(1).webp" alt="Lumin AI Central" onclick="narrar('LUMIN AI Central', 'O núcleo que conecta todos os Lumins AI para uma experiência integrada.')">
-                <h3>🌎 LUMIN AI Central</h3>
-                <p>O núcleo do ecossistema, interligando todos os Lumins AI.</p>
-            </div>
-
         </div>
     </main>
 
-    <!-- Chatbot -->
-    <div id="chatbot">
-        <h2>🤖 Fala com o LUMIN AI</h2>
-        <input type="text" id="pergunta" placeholder="Escreve a tua pergunta...">
-        <button onclick="enviarPergunta()">Enviar</button>
+    <!-- 🔥 CHATBOT INTELIGENTE LUMIN AI -->
+    <div id="chatbot-container">
+        <div id="chatbot">
+            <h2>🤖 Fale com o LUMIN AI</h2>
+            <input type="text" id="pergunta" placeholder="Escreva a sua pergunta...">
+            <button onclick="enviarPergunta()">Enviar</button>
+            <p id="resposta"></p>
+        </div>
     </div>
 
     <script>
-        function narrar(nome, descricao) {
-            let mensagem = new SpeechSynthesisUtterance(nome + ". " + descricao);
+        function narrar(texto) {
+            let mensagem = new SpeechSynthesisUtterance(texto);
+            mensagem.lang = "pt-PT"; // Define a voz para português
             speechSynthesis.speak(mensagem);
         }
 
         function enviarPergunta() {
-            let pergunta = document.getElementById("pergunta").value;
-            alert("LUMIN AI responde: " + pergunta);
+            let pergunta = document.getElementById("pergunta").value.toLowerCase();
+            let resposta = "";
+
+            if (pergunta.includes("lumins")) {
+                resposta = "Os Lumins AI são assistentes inteligentes que ajudam em diversas áreas como finanças, segurança, reciclagem e muito mais. Qual deles gostaria de saber mais?";
+            } else if (pergunta.includes("financeiro")) {
+                resposta = "O LUMIN AI Financeiro ajuda a prever tendências, otimizar investimentos e planejar o seu futuro financeiro.";
+            } else if (pergunta.includes("reciclagem")) {
+                resposta = "O LUMIN AI Recicle identifica materiais recicláveis e conecta você com os melhores serviços de sustentabilidade.";
+            } else if (pergunta.includes("comprar")) {
+                resposta = "Ótima escolha! Você pode garantir o seu LUMIN AI agora mesmo clicando em 'Comprar Agora'. Precisa de ajuda para escolher um?";
+            } else {
+                resposta = "Não entendi bem. Pode reformular a sua pergunta?";
+            }
+
+            document.getElementById("resposta").innerText = resposta;
+            narrar(resposta);
         }
     </script>
+
+    <style>
+        /* 🔥 Melhorando a aparência e funcionalidade do chatbot */
+        #chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background: #222;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        #pergunta {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #resposta {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #00c853;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #00e676;
+        }
+    </style>
+
+    <footer>
+        <p>&copy; 2025 LUMIN AI - Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
