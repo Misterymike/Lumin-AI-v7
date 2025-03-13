@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script> <!-- Script para a narração -->
 </head>
-<body>
-
+<body onload="narrarBoasVindasLumin()">
     <header>
         <h1>🔷 Os 7 Lumins AI</h1>
         <nav>
@@ -16,92 +14,90 @@
             <a href="sobre.html">Sobre</a>
             <a href="testemunhos.html">Testemunhos</a>
             <a href="faq.html">FAQ</a>
-            <a href="compra.html" class="cta">Comprar Agora</a>
+            <a href="compra.html">Comprar Agora</a>
         </nav>
     </header>
 
-    <main>
-        <h2>✨ Conheça os Lumins AI! ✨</h2>
+    <h2>✨ Conheça os Lumins AI! ✨</h2>
+    
+    <div class="lumin-container">
 
-        <div class="lumin-container">
-
-            <!-- LUMIN AI Financeiro -->
-            <div class="lumin-card">
-                <img src="Lumin Ai FINANCEIRO.webp" alt="Lumin AI Financeiro">
-                <h3>💰 LUMIN AI Financeiro</h3>
-                <p>Gestão de investimentos, previsão de tendências e planejamento financeiro.</p>
-                <button onclick="narrar('LUMIN AI Financeiro', 'Gestão de investimentos, previsão de tendências e planejamento financeiro.')">🔊 Ouvir</button>
-                <div class="buttons">
-                    <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-basico">Básico Mensal</a>
-                    <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-basico">Básico Anual</a>
-                    <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-basico">Básico Vitalício</a>
-                    <a href="https://buy.stripe.com/3cs3d3aim5Um8p2002" class="botao-vip">VIP Mensal</a>
-                    <a href="https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn" class="botao-vip">VIP Anual</a>
-                    <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-vip">VIP Vitalício</a>
-                </div>
-            </div>
-
-            <!-- LUMIN AI Recicle -->
-            <div class="lumin-card">
-                <img src="Lumin Ai Recicle.webp" alt="Lumin AI Recicle">
-                <h3>♻️ LUMIN AI Recicle</h3>
-                <p>Ajuda na reciclagem com identificação de materiais e conexões com serviços.</p>
-                <button onclick="narrar('LUMIN AI Recicle', 'Ajuda na reciclagem com identificação de materiais e conexões com serviços.')">🔊 Ouvir</button>
-                <div class="buttons">
-                    <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-basico">Básico Mensal</a>
-                    <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-basico">Básico Anual</a>
-                    <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-basico">Básico Vitalício</a>
-                    <a href="https://buy.stripe.com/3cs3d3aim5Um8p2002" class="botao-vip">VIP Mensal</a>
-                    <a href="https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn" class="botao-vip">VIP Anual</a>
-                    <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-vip">VIP Vitalício</a>
-                </div>
-            </div>
-
-            <!-- Aqui adicionamos os outros Lumins AI -->
-            <div class="lumin-card">
-                <img src="Lumin AI Vision.webp" alt="Lumin AI Vision">
-                <h3>👁️ LUMIN AI Vision</h3>
-                <p>Reconhecimento de imagens e suporte para deficientes visuais.</p>
-            </div>
-
-            <div class="lumin-card">
-                <img src="Lumin AI segurança e saude.webp" alt="Lumin AI Segurança">
-                <h3>🔒 LUMIN AI Segurança</h3>
-                <p>Proteção de dados e segurança digital avançada.</p>
-            </div>
-
-            <div class="lumin-card">
-                <img src="Lumin AI Music.webp" alt="Lumin AI Music">
-                <h3>🎵 LUMIN AI Music</h3>
-                <p>Exploração de música com inteligência artificial.</p>
-            </div>
-
-            <div class="lumin-card">
-                <img src="Lumin AI Central(1).webp" alt="Lumin AI Central">
-                <h3>🌎 LUMIN AI Central</h3>
-                <p>O núcleo do ecossistema que conecta todos os Lumins.</p>
-            </div>
-
+        <!-- LUMIN AI Financeiro -->
+        <div class="lumin">
+            <img src="Lumin AI FINANCEIRO.webp" alt="LUMIN AI Financeiro" 
+                 onmouseover="narrarLumin('LUMIN AI Financeiro', 'Analisa investimentos, prevê tendências e ajuda no planejamento financeiro.')">
+            <h2>💰 LUMIN AI Financeiro</h2>
+            <p>Gestão de investimentos, previsão de tendências e planejamento financeiro.</p>
+            <button onclick="window.location.href='https://buy.stripe.com/financeiro-basico'">Básico</button>
+            <button onclick="window.location.href='https://buy.stripe.com/financeiro-vip'">VIP</button>
         </div>
-    </main>
 
-    <div id="chatbot">
-        <h2>🤖 Fala com o LUMIN AI</h2>
-        <input type="text" id="pergunta" placeholder="Escreve a tua pergunta...">
-        <button onclick="enviarPergunta()">Enviar</button>
+        <!-- LUMIN AI Recicle -->
+        <div class="lumin">
+            <img src="Lumin AI Recicle.webp" alt="LUMIN AI Recicle" 
+                 onmouseover="narrarLumin('LUMIN AI Recicle', 'Ajuda na reciclagem com identificação de materiais e conexões com serviços sustentáveis.')">
+            <h2>♻️ LUMIN AI Recicle</h2>
+            <p>Identificação de materiais recicláveis e gestão de resíduos inteligentes.</p>
+            <button onclick="window.location.href='https://buy.stripe.com/recicle-basico'">Básico</button>
+            <button onclick="window.location.href='https://buy.stripe.com/recicle-vip'">VIP</button>
+        </div>
+
+        <!-- LUMIN AI Vision -->
+        <div class="lumin">
+            <img src="Lumin AI Vision.webp" alt="LUMIN AI Vision" 
+                 onmouseover="narrarLumin('LUMIN AI Vision', 'Reconhecimento de imagens, suporte para deficientes visuais e análise de vídeos.')">
+            <h2>👁️ LUMIN AI Vision</h2>
+            <p>Suporte para acessibilidade e reconhecimento de imagens.</p>
+            <button onclick="window.location.href='https://buy.stripe.com/vision-basico'">Básico</button>
+            <button onclick="window.location.href='https://buy.stripe.com/vision-vip'">VIP</button>
+        </div>
+
+        <!-- LUMIN AI Assistente -->
+        <div class="lumin">
+            <img src="Lumin AI Assistente.webp" alt="LUMIN AI Assistente" 
+                 onmouseover="narrarLumin('LUMIN AI Assistente', 'Ajuda na produtividade e automação de tarefas diárias.')">
+            <h2>🤖 LUMIN AI Assistente</h2>
+            <p>Assistente pessoal para produtividade e automação de tarefas.</p>
+            <button onclick="window.location.href='https://buy.stripe.com/assistente-basico'">Básico</button>
+            <button onclick="window.location.href='https://buy.stripe.com/assistente-vip'">VIP</button>
+        </div>
+
+        <!-- LUMIN AI Segurança -->
+        <div class="lumin">
+            <img src="Lumin AI Segurança.webp" alt="LUMIN AI Segurança" 
+                 onmouseover="narrarLumin('LUMIN AI Segurança', 'Proteção de dados, detecção de ameaças e segurança digital avançada.')">
+            <h2>🔒 LUMIN AI Segurança</h2>
+            <p>Defesa contra ciberataques e segurança digital aprimorada.</p>
+            <button onclick="window.location.href='https://buy.stripe.com/seguranca-basico'">Básico</button>
+            <button onclick="window.location.href='https://buy.stripe.com/seguranca-vip'">VIP</button>
+        </div>
+
+        <!-- LUMIN AI Music -->
+        <div class="lumin">
+            <img src="Lumin AI Music.webp" alt="LUMIN AI Music" 
+                 onmouseover="narrarLumin('LUMIN AI Music', 'Exploração de música com inteligência artificial.')">
+            <h2>🎵 LUMIN AI Music</h2>
+            <p>Geração de músicas e análise de padrões musicais com IA.</p>
+            <button onclick="window.location.href='https://buy.stripe.com/music-basico'">Básico</button>
+            <button onclick="window.location.href='https://buy.stripe.com/music-vip'">VIP</button>
+        </div>
+
+        <!-- LUMIN AI Agent -->
+        <div class="lumin">
+            <img src="Lumin AI Agent.webp" alt="LUMIN AI Agent" 
+                 onmouseover="narrarLumin('LUMIN AI Agent', 'Auxilia desenvolvedores na criação de projetos de inteligência artificial.')">
+            <h2>🛠️ LUMIN AI Agent</h2>
+            <p>Suporte para desenvolvedores e especialistas em IA.</p>
+            <button onclick="window.location.href='https://buy.stripe.com/agent-basico'">Básico</button>
+            <button onclick="window.location.href='https://buy.stripe.com/agent-vip'">VIP</button>
+        </div>
+
     </div>
 
-    <script>
-        function narrar(nome, descricao) {
-            let mensagem = new SpeechSynthesisUtterance(nome + ". " + descricao);
-            speechSynthesis.speak(mensagem);
-        }
+    <footer>
+        <p>© 2025 LUMIN AI - Todos os direitos reservados.</p>
+    </footer>
 
-        function enviarPergunta() {
-            let pergunta = document.getElementById("pergunta").value;
-            alert("LUMIN AI responde: " + pergunta);
-        }
-    </script>
-
+    <script src="chatbot.js"></script>
 </body>
 </html>
