@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script>
-    <script src="chatbot.js" defer></script>
+    <script src="chatbot.js" defer></script> 
 </head>
 <body>
 
@@ -58,26 +57,9 @@
                 <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
             </div>
 
-            <!-- LUMIN AI Music -->
-            <div class="lumin-card">
-                <img src="Lumin_AI_Music.webp" alt="Lumin AI Music" onclick="narrarTexto('LUMIN AI Music: Exploração de música com inteligência artificial.')">
-                <h3>🎵 LUMIN AI Music</h3>
-                <p>Exploração de música com inteligência artificial.</p>
-                <a href="https://buy.stripe.com/3cs3d3aim5Um8p2002" class="botao-comprar">Comprar - €500</a>
-            </div>
-
-            <!-- LUMIN AI Central -->
-            <div class="lumin-card">
-                <img src="Lumin_AI_Central.webp" alt="Lumin AI Central" onclick="narrarTexto('LUMIN AI Central: O núcleo do ecossistema que conecta todos os Lumins AI.')">
-                <h3>🌎 LUMIN AI Central</h3>
-                <p>O núcleo do ecossistema que conecta todos os Lumins.</p>
-                <a href="https://buy.stripe.com/9AQaFvbmqeqScFicMM" class="botao-comprar">Comprar - €500</a>
-            </div>
-
         </div>
     </main>
 
-    <!-- Chatbot -->
     <div id="chatbot">
         <h2>🤖 Fale com o LUMIN AI</h2>
         <input type="text" id="pergunta" placeholder="Escreva sua pergunta...">
@@ -87,13 +69,8 @@
 
     <script>
         function narrarTexto(texto) {
-            if ('speechSynthesis' in window) {
-                let mensagem = new SpeechSynthesisUtterance(texto);
-                mensagem.lang = 'pt-PT';  // Português de Portugal
-                speechSynthesis.speak(mensagem);
-            } else {
-                alert("Seu navegador não suporta narração de texto.");
-            }
+            let mensagem = new SpeechSynthesisUtterance(texto);
+            speechSynthesis.speak(mensagem);
         }
 
         function enviarPergunta() {
