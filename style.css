@@ -1,11 +1,21 @@
-.lumin-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    cursor: pointer; /* Mostra que é interativo */
-    transition: transform 0.2s ease-in-out;
+.botao-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-.lumin-card img:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+.botao-container button {
+    background-color: cyan;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.botao-container button:hover {
+    background-color: #00a2ff;
 }
