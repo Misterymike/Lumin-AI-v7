@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script> <!-- Script de narração -->
+    <script src="narracao.js" defer></script> 
+    <script src="chatbot.js" defer></script> 
 </head>
 <body>
 
@@ -27,69 +28,44 @@
 
             <!-- LUMIN AI Financeiro -->
             <div class="lumin-card">
-                <img src="Lumin Ai FINANCEIRO.webp" alt="Lumin AI Financeiro"
-                     onmouseover="narrar('LUMIN AI Financeiro', 'Sou o LUMIN AI Financeiro! Ajudo na gestão de investimentos, previsão de tendências e planejamento financeiro.')">
+                <img src="Lumin_AI_Financeiro.webp" alt="Lumin AI Financeiro" onclick="narrar('LUMIN AI Financeiro', 'Gestão de investimentos, previsão de tendências e planejamento financeiro.')">
                 <h3>💰 LUMIN AI Financeiro</h3>
                 <p>Gestão de investimentos, previsão de tendências e planejamento financeiro.</p>
-                <button onclick="narrar('LUMIN AI Financeiro', 'Sou o LUMIN AI Financeiro! Ajudo na gestão de investimentos, previsão de tendências e planejamento financeiro.')">🔊 Ouvir</button>
-                <div class="buttons">
-                    <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-basico">Básico</a>
-                    <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-vip">VIP</a>
-                </div>
+                <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Recicle -->
             <div class="lumin-card">
-                <img src="Lumin Ai Recicle.webp" alt="Lumin AI Recicle"
-                     onmouseover="narrar('LUMIN AI Recicle', 'Sou o LUMIN AI Recicle! Ajudo-te a identificar materiais recicláveis e encontrar os melhores serviços sustentáveis.')">
+                <img src="Lumin_AI_Recicle.webp" alt="Lumin AI Recicle" onclick="narrar('LUMIN AI Recicle', 'Ajuda na reciclagem com identificação de materiais e conexões com serviços.')">
                 <h3>♻️ LUMIN AI Recicle</h3>
                 <p>Ajuda na reciclagem com identificação de materiais e conexões com serviços.</p>
-                <button onclick="narrar('LUMIN AI Recicle', 'Sou o LUMIN AI Recicle! Ajudo-te a identificar materiais recicláveis e encontrar os melhores serviços sustentáveis.')">🔊 Ouvir</button>
-                <div class="buttons">
-                    <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-basico">Básico</a>
-                    <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-vip">VIP</a>
-                </div>
+                <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Vision -->
             <div class="lumin-card">
-                <img src="Lumin AI Vision.webp" alt="Lumin AI Vision"
-                     onmouseover="narrar('LUMIN AI Vision', 'Sou o LUMIN AI Vision! Análise de imagens e suporte para deficientes visuais.')">
+                <img src="Lumin_AI_Vision.webp" alt="Lumin AI Vision" onclick="narrar('LUMIN AI Vision', 'Reconhecimento de imagens e suporte para deficientes visuais.')">
                 <h3>👁️ LUMIN AI Vision</h3>
                 <p>Reconhecimento de imagens e suporte para deficientes visuais.</p>
+                <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Segurança -->
             <div class="lumin-card">
-                <img src="Lumin AI segurança e saude.webp" alt="Lumin AI Segurança"
-                     onmouseover="narrar('LUMIN AI Segurança', 'Sou o LUMIN AI Segurança! Proteção de dados avançada contra ameaças digitais.')">
+                <img src="Lumin_AI_Seguranca.webp" alt="Lumin AI Segurança" onclick="narrar('LUMIN AI Segurança', 'Proteção de dados e segurança digital avançada.')">
                 <h3>🔒 LUMIN AI Segurança</h3>
                 <p>Proteção de dados e segurança digital avançada.</p>
-            </div>
-
-            <!-- LUMIN AI Music -->
-            <div class="lumin-card">
-                <img src="Lumin AI Music.webp" alt="Lumin AI Music"
-                     onmouseover="narrar('LUMIN AI Music', 'Sou o LUMIN AI Music! Personalizo as tuas playlists e crio experiências sonoras únicas.')">
-                <h3>🎵 LUMIN AI Music</h3>
-                <p>Exploração de música com inteligência artificial.</p>
-            </div>
-
-            <!-- LUMIN AI Central -->
-            <div class="lumin-card">
-                <img src="Lumin AI Central(1).webp" alt="Lumin AI Central"
-                     onmouseover="narrar('LUMIN AI Central', 'Sou o LUMIN AI Central! O núcleo do ecossistema que conecta todos os Lumins AI.')">
-                <h3>🌎 LUMIN AI Central</h3>
-                <p>O núcleo do ecossistema que conecta todos os Lumins.</p>
+                <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
             </div>
 
         </div>
     </main>
 
     <div id="chatbot">
-        <h2>🤖 Fala com o LUMIN AI</h2>
-        <input type="text" id="pergunta" placeholder="Escreve a tua pergunta...">
+        <h2>🤖 Fale com o LUMIN AI</h2>
+        <input type="text" id="pergunta" placeholder="Escreva sua pergunta...">
         <button onclick="enviarPergunta()">Enviar</button>
+        <p id="resposta"></p>
     </div>
 
     <script>
@@ -100,51 +76,22 @@
 
         function enviarPergunta() {
             let pergunta = document.getElementById("pergunta").value;
-            let resposta = "LUMIN AI responde: " + pergunta;
+            let resposta = "";
+
+            if (pergunta.includes("preço") || pergunta.includes("custo")) {
+                resposta = "Os Lumins AI custam 500 euros cada. O eBook custa 20 euros.";
+            } else if (pergunta.includes("o que faz") || pergunta.includes("funcionalidade")) {
+                resposta = "Cada Lumin tem funções específicas. Clique sobre eles para ouvir a narração!";
+            } else if (pergunta.includes("comprar")) {
+                resposta = "Pode comprar diretamente nos botões de cada Lumin!";
+            } else {
+                resposta = "Sou o LUMIN AI, estou aqui para ajudar! Pergunte-me sobre os produtos.";
+            }
+
             document.getElementById("resposta").innerText = resposta;
+            narrar("LUMIN AI", resposta);
         }
     </script>
-
-    <style>
-        /* Melhorando o tamanho do chatbot */
-        #chatbot {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #1e1e1e;
-            color: white;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-        }
-
-        #pergunta {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .botao-comprar {
-            display: inline-block;
-            background: #28a745;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        .botao-comprar:hover {
-            background: #218838;
-        }
-    </style>
-
-    <footer>
-        <p>&copy; 2025 LUMIN AI - Todos os direitos reservados.</p>
-    </footer>
 
 </body>
 </html>
