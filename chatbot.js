@@ -1,54 +1,109 @@
-function sendQuestion(question) {
-    document.getElementById('userInput').value = question;
-    sendUserInput();
-}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os 7 Lumins AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="narracao.js" defer></script>
+</head>
+<body>
 
-function sendUserInput() {
-    let userInput = document.getElementById('userInput').value.toLowerCase();
-    let responseBox = document.getElementById('chatResponse');
-    let responseText = '';
+    <header>
+        <h1>🔷 Os 7 Lumins AI</h1>
+        <nav>
+            <a href="index.html">Página Inicial</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="testemunhos.html">Testemunhos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="compra.html" class="cta">Comprar Agora</a>
+        </nav>
+    </header>
 
-    // Compreensão de saudações
-    if (["olá", "oi", "bom dia", "boa tarde", "boa noite"].includes(userInput)) {
-        responseText = "Olá! Como posso ajudar-te hoje? 😊";
-    } else if (userInput.includes('lumin ai')) {
-        responseText = 'LUMIN AI é um assistente virtual projetado para ajudar na automatização e eficiência financeira. Descobre os nossos serviços em <a href="index.html">LUMIN AI</a>.';
-    } else if (userInput.includes('dinheiro')) {
-        responseText = 'Com IA, podes criar fluxos de rendimento passivo automatizados. Queres saber mais? Explora o nosso eBook exclusivo 📘 👉 <a href="comprar.html?plano=ebook">Comprar eBook</a>';
-    } else if (userInput.includes('vantagens da ia')) {
-        responseText = 'A inteligência artificial pode aumentar a produtividade, reduzir erros e criar novas oportunidades de negócio! Explora o nosso eBook 📘 👉 <a href="comprar.html?plano=ebook">Comprar eBook</a>';
-    } else if (userInput.includes('como ganhar dinheiro')) {
-        responseText = 'O nosso eBook explica passo a passo como podes ganhar dinheiro com IA. 📘 Descobre estratégias exclusivas aqui 👉 <a href="comprar.html?plano=ebook">Comprar eBook</a>';
-    
-    // Respostas para os Lumins AI
-    } else if (userInput.includes('financeiro')) {
-        responseText = 'O LUMIN AI Financeiro ajuda-te a analisar o mercado e investir melhor. 📊 <a href="lumin-financeiro.html">Saber Mais</a>';
-    } else if (userInput.includes('assistente')) {
-        responseText = 'O LUMIN AI Assistente auxilia-te nas tuas tarefas diárias e organização. 🤖 <a href="lumin-assistente.html">Saber Mais</a>';
-    } else if (userInput.includes('agent')) {
-        responseText = 'O LUMIN AI Agent é ideal para desenvolvedores e criadores de projetos de IA. 🔧 <a href="lumin-agent.html">Saber Mais</a>';
-    } else if (userInput.includes('educador')) {
-        responseText = 'O LUMIN AI Educador otimiza o ensino e a aprendizagem com IA. 📚 <a href="lumin-educador.html">Saber Mais</a>';
-    } else if (userInput.includes('automação')) {
-        responseText = 'O LUMIN AI Automação melhora processos empresariais e fluxos de trabalho. ⚙️ <a href="lumin-automacao.html">Saber Mais</a>';
-    } else if (userInput.includes('investidor')) {
-        responseText = 'O LUMIN AI Investidor encontra as melhores oportunidades financeiras. 📈 <a href="lumin-investidor.html">Saber Mais</a>';
-    } else if (userInput.includes('suporte')) {
-        responseText = 'O LUMIN AI Suporte resolve problemas e otimiza atendimento ao cliente. 🎧 <a href="lumin-suporte.html">Saber Mais</a>';
+    <main>
+        <h2>✨ Conheça os Lumins AI! ✨</h2>
 
-    // Links diretos para planos
-    } else if (userInput.includes('comprar') || userInput.includes('planos')) {
-        responseText = 'Explora os nossos planos e escolhe o melhor para ti! 🛒 <a href="comprar.html">Ver Planos</a>';
+        <div class="lumin-container">
+            <div class="lumin-card">
+                <img src="Lumin Ai FINANCEIRO.webp" alt="Lumin AI Financeiro">
+                <h3>💰 LUMIN AI Financeiro</h3>
+                <p>Gestão de investimentos, previsão de tendências e planejamento financeiro.</p>
+            </div>
+            <div class="lumin-card">
+                <img src="Lumin Ai Recicle.webp" alt="Lumin AI Recicle">
+                <h3>♻️ LUMIN AI Recicle</h3>
+                <p>Ajuda na reciclagem com identificação de materiais e conexões com serviços.</p>
+            </div>
+        </div>
+    </main>
 
-    } else {
-        responseText = 'Desculpa, não entendi. Podes reformular a pergunta? Ou explora os serviços do LUMIN AI: <a href="index.html">Descobrir</a>';
-    }
+    <!-- CHATBOT REAL -->
+    <div id="chatbot">
+        <h2>🤖 Fale com o LUMIN AI</h2>
+        <input type="text" id="pergunta" placeholder="Escreva a sua pergunta...">
+        <button onclick="enviarPergunta()">Enviar</button>
+        <p id="resposta"></p>
+    </div>
 
-    responseBox.innerHTML = '<p><strong>LUMIN AI:</strong> ' + responseText + '</p>';
-    
-    // Narração por voz melhorada
-    let utterance = new SpeechSynthesisUtterance(responseText.replace(/<[^>]*>/g, ''));
-    utterance.lang = 'pt-PT';
-    utterance.rate = 1.1;
-    speechSynthesis.speak(utterance);
-}
+    <script>
+        function narrar(texto) {
+            let mensagem = new SpeechSynthesisUtterance(texto);
+            mensagem.lang = "pt-PT"; // Definir a voz para português
+            speechSynthesis.speak(mensagem);
+        }
+
+        function enviarPergunta() {
+            let pergunta = document.getElementById("pergunta").value.toLowerCase();
+            let resposta = "";
+
+            if (pergunta.includes("lumins")) {
+                resposta = "Os Lumins AI são assistentes inteligentes que ajudam em diversas áreas como finanças, segurança, reciclagem e muito mais. Qual deles gostaria de saber mais?";
+            } else if (pergunta.includes("financeiro")) {
+                resposta = "O LUMIN AI Financeiro ajuda a prever tendências, otimizar investimentos e planejar o seu futuro financeiro.";
+            } else if (pergunta.includes("reciclagem")) {
+                resposta = "O LUMIN AI Recicle identifica materiais recicláveis e conecta você com os melhores serviços de sustentabilidade.";
+            } else if (pergunta.includes("comprar")) {
+                resposta = "Ótima escolha! Você pode garantir o seu LUMIN AI agora mesmo clicando em 'Comprar Agora'. Precisa de ajuda para escolher um?";
+            } else {
+                resposta = "Não entendi bem. Pode reformular a sua pergunta?";
+            }
+
+            document.getElementById("resposta").innerText = resposta;
+            narrar(resposta);
+        }
+    </script>
+
+    <style>
+        /* Melhorando a experiência do chatbot */
+        #chatbot {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        #pergunta {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #resposta {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+
+    <footer>
+        <p>&copy; 2025 LUMIN AI - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
