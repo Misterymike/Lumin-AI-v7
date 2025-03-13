@@ -61,6 +61,7 @@
         </div>
     </main>
 
+    <!-- Chatbot do LUMIN AI -->
     <div id="chatbot">
         <h2>🤖 Fale com o LUMIN AI</h2>
         <input type="text" id="pergunta" placeholder="Escreva sua pergunta...">
@@ -75,7 +76,7 @@
         }
 
         function enviarPergunta() {
-            let pergunta = document.getElementById("pergunta").value;
+            let pergunta = document.getElementById("pergunta").value.toLowerCase();
             let resposta = "";
 
             if (pergunta.includes("preço") || pergunta.includes("custo")) {
@@ -84,6 +85,14 @@
                 resposta = "Cada Lumin tem funções específicas. Clique sobre eles para ouvir a narração!";
             } else if (pergunta.includes("comprar")) {
                 resposta = "Pode comprar diretamente nos botões de cada Lumin!";
+            } else if (pergunta.includes("financeiro")) {
+                resposta = "O LUMIN AI Financeiro ajuda na gestão de investimentos e previsão de tendências.";
+            } else if (pergunta.includes("recicle")) {
+                resposta = "O LUMIN AI Recicle identifica materiais recicláveis e conecta a serviços sustentáveis.";
+            } else if (pergunta.includes("vision")) {
+                resposta = "O LUMIN AI Vision fornece suporte visual através de reconhecimento de imagens.";
+            } else if (pergunta.includes("segurança")) {
+                resposta = "O LUMIN AI Segurança protege seus dados e garante segurança digital avançada.";
             } else {
                 resposta = "Sou o LUMIN AI, estou aqui para ajudar! Pergunte-me sobre os produtos.";
             }
