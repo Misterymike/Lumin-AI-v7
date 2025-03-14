@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script> <!-- Arquivo para narração -->
+    <script src="narracao.js" defer></script> <!-- Script para a narração -->
 </head>
 <body>
 
@@ -27,7 +27,7 @@
 
             <!-- LUMIN AI Financeiro -->
             <div class="lumin-card">
-                <img src="Lumin_AI_FINANCEIRO.webp" alt="Lumin AI Financeiro" onclick="narrarFinanceiro()">
+                <img src="imagens/Lumin Ai FINANCEIRO.webp" alt="Lumin AI Financeiro" onclick="narrarFinanceiro()">
                 <h3>💰 LUMIN AI Financeiro</h3>
                 <p>Analisa o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.</p>
                 <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-comprar">Comprar - €500</a>
@@ -35,7 +35,7 @@
 
             <!-- LUMIN AI Assistente -->
             <div class="lumin-card">
-                <img src="Lumin_AI_Assistente.webp" alt="Lumin AI Assistente" onclick="narrarAssistente()">
+                <img src="imagens/Lumin AI Assistente.webp" alt="Lumin AI Assistente" onclick="narrarAssistente()">
                 <h3>🤖 LUMIN AI Assistente</h3>
                 <p>Auxilia nas tuas tarefas diárias e organiza a tua agenda de forma eficiente.</p>
                 <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-comprar">Comprar - €500</a>
@@ -43,7 +43,7 @@
 
             <!-- LUMIN AI Agent -->
             <div class="lumin-card">
-                <img src="Lumin_AI_Agent.webp" alt="Lumin AI Agent" onclick="narrarAgent()">
+                <img src="imagens/Lumin AI Agent.webp" alt="Lumin AI Agent" onclick="narrarAgent()">
                 <h3>🛠️ LUMIN AI Agent</h3>
                 <p>Ajuda desenvolvedores a criar projetos com inteligência artificial.</p>
                 <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
@@ -51,7 +51,7 @@
 
             <!-- LUMIN AI Recycle -->
             <div class="lumin-card">
-                <img src="Lumin_AI_Recycle.webp" alt="Lumin AI Recycle" onclick="narrarRecicle()">
+                <img src="imagens/Lumin Ai Recicle.webp" alt="Lumin AI Recycle" onclick="narrarRecicle()">
                 <h3>♻️ LUMIN AI Recycle</h3>
                 <p>Promove a sustentabilidade ajudando a gerir resíduos e reciclagem de forma inteligente.</p>
                 <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
@@ -59,23 +59,23 @@
 
             <!-- LUMIN AI Vision -->
             <div class="lumin-card">
-                <img src="Lumin_AI_Vision.webp" alt="Lumin AI Vision" onclick="narrarVision()">
+                <img src="imagens/Lumin AI Vision.webp" alt="Lumin AI Vision" onclick="narrarVision()">
                 <h3>👁️ LUMIN AI Vision</h3>
                 <p>Utiliza tecnologia de visão computacional para ajudar na acessibilidade e análise de imagens.</p>
                 <a href="https://buy.stripe.com/3cs3d3aim5Um8p2002" class="botao-comprar">Comprar - €500</a>
             </div>
 
-            <!-- LUMIN AI Security -->
+            <!-- LUMIN AI Segurança -->
             <div class="lumin-card">
-                <img src="Lumin_AI_Security.webp" alt="Lumin AI Security" onclick="narrarSeguranca()">
-                <h3>🔒 LUMIN AI Security</h3>
+                <img src="imagens/Lumin AI segurança e saude.webp" alt="Lumin AI Segurança" onclick="narrarSeguranca()">
+                <h3>🔒 LUMIN AI Segurança</h3>
                 <p>Protege os teus dados e sistemas contra ameaças cibernéticas.</p>
                 <a href="https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Central -->
             <div class="lumin-card">
-                <img src="Lumin_AI_Central.webp" alt="Lumin AI Central" onclick="narrarCentral()">
+                <img src="imagens/Lumin AI Central(1).webp" alt="Lumin AI Central" onclick="narrarCentral()">
                 <h3>🌎 LUMIN AI Central</h3>
                 <p>O núcleo do ecossistema que conecta todos os Lumins.</p>
                 <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
@@ -88,7 +88,7 @@
         function narrarTexto(texto) {
             let synth = window.speechSynthesis;
             let mensagem = new SpeechSynthesisUtterance(texto);
-            synth.cancel(); // Para qualquer fala em andamento antes de iniciar uma nova
+            synth.cancel(); 
             synth.speak(mensagem);
         }
 
@@ -113,7 +113,7 @@
         }
 
         function narrarSeguranca() {
-            narrarTexto("Eu sou o LUMIN AI Security. A tua segurança online é a minha prioridade. Protejo os teus dados e sistemas contra ameaças digitais, garantindo a tua privacidade!");
+            narrarTexto("Eu sou o LUMIN AI Segurança. A tua segurança online é a minha prioridade. Protejo os teus dados e sistemas contra ameaças digitais, garantindo a tua privacidade!");
         }
 
         function narrarCentral() {
