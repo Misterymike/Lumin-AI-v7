@@ -5,82 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script> 
 </head>
 <body>
+    <!-- Menu de navegação -->
+    <div id="menuContainer"></div>
 
-    <header>
-        <h1>🔷 Os 7 Lumins AI</h1>
-        <nav>
-            <a href="index.html">Página Inicial</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="testemunhos.html">Testemunhos</a>
-            <a href="faq.html">FAQ</a>
-            <a href="compra.html" class="cta">Comprar Agora</a>
-        </nav>
-    </header>
+    <h1>🔷 Os 7 Lumins AI</h1>
+    <p>Conhece os assistentes LUMIN AI e as suas funcionalidades inovadoras.</p>
 
-    <main>
-        <h2>✨ Conheça os Lumins AI! ✨</h2>
+    <div class="lumin-container">
 
-        <div class="lumin-container">
-
-            <!-- LUMIN AI Financeiro -->
-            <div class="lumin-card">
-                <img src="Lumin AI FINANCEIRO.webp" alt="Lumin AI Financeiro" onclick="narrar('LUMIN AI Financeiro', 'Sou o LUMIN AI Financeiro! Prevejo tendências, otimizo investimentos e ajudo a aumentar os teus rendimentos.')">
-                <h3>💰 LUMIN AI Financeiro</h3>
-                <p>Gestão de investimentos, previsão de tendências e planeamento financeiro.</p>
-                <button onclick="pararNarracao()">⏹️ Parar Narração</button>
-                <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-comprar">Comprar - €500</a>
-            </div>
-
-            <!-- LUMIN AI Recicle -->
-            <div class="lumin-card">
-                <img src="Lumin AI Recicle.webp" alt="Lumin AI Recicle" onclick="narrar('LUMIN AI Recicle', 'Sou o LUMIN AI Recicle! Ajudo-te a identificar materiais recicláveis e encontrar os melhores serviços sustentáveis.')">
-                <h3>♻️ LUMIN AI Recicle</h3>
-                <p>Ajuda na reciclagem com identificação de materiais e conexões com serviços.</p>
-                <button onclick="pararNarracao()">⏹️ Parar Narração</button>
-                <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-comprar">Comprar - €500</a>
-            </div>
-
-            <!-- LUMIN AI Vision -->
-            <div class="lumin-card">
-                <img src="Lumin AI Vision.webp" alt="Lumin AI Vision" onclick="narrar('LUMIN AI Vision', 'Sou o LUMIN AI Vision! Analiso imagens e ajudo pessoas com deficiência visual a compreenderem o mundo.')">
-                <h3>👁️ LUMIN AI Vision</h3>
-                <p>Reconhecimento de imagens e suporte para deficientes visuais.</p>
-                <button onclick="pararNarracao()">⏹️ Parar Narração</button>
-                <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
-            </div>
-
-            <!-- LUMIN AI Segurança -->
-            <div class="lumin-card">
-                <img src="Lumin AI segurança e saude.webp" alt="Lumin AI Segurança" onclick="narrar('LUMIN AI Segurança', 'Sou o LUMIN AI Segurança! Protejo os teus dados contra ameaças digitais e ataques cibernéticos.')">
-                <h3>🔒 LUMIN AI Segurança</h3>
-                <p>Proteção de dados e segurança digital avançada.</p>
-                <button onclick="pararNarracao()">⏹️ Parar Narração</button>
-                <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
-            </div>
-
-            <!-- LUMIN AI Music -->
-            <div class="lumin-card">
-                <img src="Lumin AI Music.webp" alt="Lumin AI Music" onclick="narrar('LUMIN AI Music', 'Sou o LUMIN AI Music! Descubro novas músicas e crio experiências sonoras únicas para ti.')">
-                <h3>🎵 LUMIN AI Music</h3>
-                <p>Exploração de música com inteligência artificial.</p>
-                <button onclick="pararNarracao()">⏹️ Parar Narração</button>
-                <a href="https://buy.stripe.com/9AQaFvbmqeqScFicMM" class="botao-comprar">Comprar - €500</a>
-            </div>
-
-            <!-- LUMIN AI Central -->
-            <div class="lumin-card">
-                <img src="Lumin AI Central(1).webp" alt="Lumin AI Central" onclick="narrar('LUMIN AI Central', 'Sou o LUMIN AI Central! Conecto todos os Lumins AI para criar um ecossistema de inteligência artificial integrado.')">
-                <h3>🌎 LUMIN AI Central</h3>
-                <p>O núcleo do ecossistema que conecta todos os Lumins.</p>
-                <button onclick="pararNarracao()">⏹️ Parar Narração</button>
-                <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
-            </div>
-
+        <!-- LUMIN AI Financeiro -->
+        <div class="lumin">
+            <img src="imagens/Lumin_Ai_FINANCEIRO.webp" alt="LUMIN AI Financeiro" onclick="narrar('LUMIN AI Financeiro', 'Sou o LUMIN AI Financeiro! Analiso o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.')">
+            <h2>💰 LUMIN AI Financeiro</h2>
+            <p>Analisa o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.</p>
+            <button onclick="pararNarracao()">⏹️ Parar Narração</button>
         </div>
-    </main>
+
+        <!-- LUMIN AI Assistente -->
+        <div class="lumin">
+            <img src="imagens/Lumin_Ai_Assistente.webp" alt="LUMIN AI Assistente" onclick="narrar('LUMIN AI Assistente', 'Sou o LUMIN AI Assistente! Organizo a tua agenda, automatizo tarefas e ajudo-te a ser mais produtivo.')">
+            <h2>🤖 LUMIN AI Assistente</h2>
+            <p>Auxilia nas tuas tarefas diárias e organiza a tua agenda de forma eficiente.</p>
+            <button onclick="pararNarracao()">⏹️ Parar Narração</button>
+        </div>
+
+        <!-- LUMIN AI Agent -->
+        <div class="lumin">
+            <img src="imagens/Lumin_Ai_Agent.webp" alt="LUMIN AI Agent" onclick="narrar('LUMIN AI Agent', 'Sou o LUMIN AI Agent! Acompanho-te no desenvolvimento de projetos e assisto programadores no mundo da inteligência artificial.')">
+            <h2>🛠️ LUMIN AI Agent</h2>
+            <p>Ajuda desenvolvedores a criar projetos com inteligência artificial.</p>
+            <button onclick="pararNarracao()">⏹️ Parar Narração</button>
+        </div>
+
+        <!-- LUMIN AI Recycle -->
+        <div class="lumin">
+            <img src="imagens/Lumin_Ai_Recycle.webp" alt="LUMIN AI Recycle" onclick="narrar('LUMIN AI Recycle', 'Sou o LUMIN AI Recycle! Trabalho para um futuro sustentável, ajudando a gerir resíduos e reciclagem de forma inteligente.')">
+            <h2>♻️ LUMIN AI Recycle</h2>
+            <p>Promove a sustentabilidade ajudando a gerir resíduos e reciclagem de forma inteligente.</p>
+            <button onclick="pararNarracao()">⏹️ Parar Narração</button>
+        </div>
+
+        <!-- LUMIN AI Vision -->
+        <div class="lumin">
+            <img src="imagens/Lumin_Ai_Vision.webp" alt="LUMIN AI Vision" onclick="narrar('LUMIN AI Vision', 'Sou o LUMIN AI Vision! Utilizo tecnologia avançada para ajudar na acessibilidade e análise de imagens.')">
+            <h2>👁️ LUMIN AI Vision</h2>
+            <p>Utiliza tecnologia de visão computacional para ajudar na acessibilidade e análise de imagens.</p>
+            <button onclick="pararNarracao()">⏹️ Parar Narração</button>
+        </div>
+
+        <!-- LUMIN AI Security -->
+        <div class="lumin">
+            <img src="imagens/Lumin_Ai_Security.webp" alt="LUMIN AI Security" onclick="narrar('LUMIN AI Security', 'Sou o LUMIN AI Security! Protejo os teus dados e sistemas contra ameaças cibernéticas.')">
+            <h2>🔒 LUMIN AI Security</h2>
+            <p>Protege os teus dados e sistemas contra ameaças cibernéticas.</p>
+            <button onclick="pararNarracao()">⏹️ Parar Narração</button>
+        </div>
+
+        <!-- LUMIN AI Educador -->
+        <div class="lumin">
+            <img src="imagens/Lumin_Ai_Educador.webp" alt="LUMIN AI Educador" onclick="narrar('LUMIN AI Educador', 'Sou o LUMIN AI Educador! Facilito o teu aprendizado e recomendo cursos para a tua evolução.')">
+            <h2>📚 LUMIN AI Educador</h2>
+            <p>Facilita o aprendizado com recomendações personalizadas de cursos e materiais educativos.</p>
+            <button onclick="pararNarracao()">⏹️ Parar Narração</button>
+        </div>
+    </div>
 
     <script>
         let sintese = window.speechSynthesis;
