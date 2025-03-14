@@ -5,12 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUMIN AI - Revolução da Inteligência Artificial</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function narrarTexto(texto) {
+            let sintese = new SpeechSynthesisUtterance(texto);
+            speechSynthesis.cancel(); // Para qualquer narração anterior
+            speechSynthesis.speak(sintese);
+        }
+    </script>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero {
+            background: url('Fundo Ai.webp') no-repeat center center/cover;
+            color: white;
+            padding: 60px 20px;
+            border-radius: 10px;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .botao-destaque {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .botao-destaque:hover {
+            background-color: #0056b3;
+        }
+
+        .produtos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .produto {
+            max-width: 300px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .produto img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .botao-comprar {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .botao-comprar:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <h1>🤖 LUMIN AI - Revolução da Inteligência Artificial</h1>
         <nav>
+            <a href="index.html">Página Inicial</a>
             <a href="#lumins">Conheça os Lumins</a>
             <a href="#ebook">eBook Inteligência Artificial</a>
             <a href="#faq">Dúvidas Frequentes</a>
@@ -19,37 +105,41 @@
     </header>
 
     <section class="hero">
-        <h2>🚀 Transforme sua Vida com o LUMIN AI</h2>
-        <p>A nova era da inteligência artificial chegou. Automatize, otimize e expanda suas capacidades com os Lumins AI.</p>
-        <a href="#comprar" class="botao-destaque">Quero Garantir o Meu!</a>
+        <h2>🚀 Transforma a tua Vida com o LUMIN AI</h2>
+        <p>A nova era da inteligência artificial chegou. Automatiza, otimiza e expande as tuas capacidades com os Lumins AI.</p>
+        <a href="compra.html" class="botao-destaque">Quero Garantir o Meu!</a>
     </section>
 
     <section id="lumins" class="produtos">
-        <h2>🛠️ Conheça os Lumins AI</h2>
+        <h2>🛠️ Conhece os Lumins AI</h2>
 
         <div class="produto">
-            <img src="Lumin_AI_Financeiro.webp" alt="LUMIN AI Financeiro">
+            <img src="Lumin Ai FINANCEIRO.webp" alt="LUMIN AI Financeiro" 
+                onclick="narrarTexto('Eu sou o LUMIN AI Financeiro! Vou ajudar-te a maximizar os teus ganhos analisando tendências e oportunidades do mercado.')">
             <h3>💰 LUMIN AI Financeiro</h3>
             <p>Planeamento financeiro e previsão de tendências.</p>
             <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-comprar">Comprar - €500</a>
         </div>
 
         <div class="produto">
-            <img src="Lumin_AI_Recicle.webp" alt="LUMIN AI Recicle">
+            <img src="Lumin Ai Recicle.webp" alt="LUMIN AI Recicle"
+                onclick="narrarTexto('Eu sou o LUMIN AI Recicle! Ajudo-te a reciclar e identificar materiais de forma sustentável.')">
             <h3>♻️ LUMIN AI Recicle</h3>
             <p>Identificação de materiais e reciclagem inteligente.</p>
             <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-comprar">Comprar - €500</a>
         </div>
 
         <div class="produto">
-            <img src="Lumin_AI_Vision.webp" alt="LUMIN AI Vision">
+            <img src="Lumin Ai Vision.webp" alt="LUMIN AI Vision"
+                onclick="narrarTexto('Eu sou o LUMIN AI Vision! Forneço suporte visual e reconhecimento de imagens para melhorar a acessibilidade.')">
             <h3>👁️ LUMIN AI Vision</h3>
             <p>Suporte visual com reconhecimento de imagens.</p>
             <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
         </div>
 
         <div class="produto">
-            <img src="Lumin_AI_Seguranca.webp" alt="LUMIN AI Segurança">
+            <img src="Lumin Ai segurança e saude.webp" alt="LUMIN AI Segurança"
+                onclick="narrarTexto('Eu sou o LUMIN AI Segurança! Protejo os teus dados e sistemas contra ameaças cibernéticas.')">
             <h3>🔒 LUMIN AI Segurança</h3>
             <p>Proteção de dados com tecnologia avançada.</p>
             <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
@@ -58,7 +148,7 @@
 
     <section id="ebook" class="ebook">
         <h2>📖 eBook - Inteligência Artificial e o LUMIN AI</h2>
-        <p>Aprenda tudo sobre IA e como os Lumins podem transformar sua vida.</p>
+        <p>Aprende tudo sobre IA e como os Lumins podem transformar a tua vida.</p>
         <a href="https://buy.stripe.com/9AQaFvbmqeqScFicMM" class="botao-comprar">Comprar - €20</a>
     </section>
 
@@ -70,7 +160,7 @@
         </div>
         <div class="faq-item">
             <h3>O que recebo ao comprar?</h3>
-            <p>Você terá acesso imediato ao software e suporte especializado.</p>
+            <p>Vais ter acesso imediato ao software e suporte especializado.</p>
         </div>
     </section>
 
