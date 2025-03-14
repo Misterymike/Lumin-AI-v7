@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script>
-    <script src="chatbot.js" defer></script>
 </head>
 <body>
 
@@ -28,15 +26,15 @@
 
             <!-- LUMIN AI Financeiro -->
             <div class="lumin-card">
-                <img src="Lumin Ai FINANCEIRO.webp" alt="Lumin AI Financeiro" onclick="apresentarLumin('financeiro')">
+                <img src="Lumin_AI_Financeiro.webp" alt="Lumin AI Financeiro" onclick="apresentarLumin('financeiro')">
                 <h3>💰 LUMIN AI Financeiro</h3>
-                <p>Gestão de investimentos, previsão de tendências e planejamento financeiro.</p>
+                <p>Gestão de investimentos, previsão de tendências e planeamento financeiro.</p>
                 <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Recicle -->
             <div class="lumin-card">
-                <img src="Lumin Ai Recicle.webp" alt="Lumin AI Recicle" onclick="apresentarLumin('recicle')">
+                <img src="Lumin_AI_Recicle.webp" alt="Lumin AI Recicle" onclick="apresentarLumin('recicle')">
                 <h3>♻️ LUMIN AI Recicle</h3>
                 <p>Ajuda na reciclagem com identificação de materiais e conexões com serviços.</p>
                 <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-comprar">Comprar - €500</a>
@@ -44,15 +42,15 @@
 
             <!-- LUMIN AI Vision -->
             <div class="lumin-card">
-                <img src="Lumin AI Vision.webp" alt="Lumin AI Vision" onclick="apresentarLumin('vision')">
+                <img src="Lumin_AI_Vision.webp" alt="Lumin AI Vision" onclick="apresentarLumin('vision')">
                 <h3>👁️ LUMIN AI Vision</h3>
-                <p>Reconhecimento de imagens e suporte para deficientes visuais.</p>
+                <p>Reconhecimento de imagens e suporte para pessoas com deficiência visual.</p>
                 <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Segurança -->
             <div class="lumin-card">
-                <img src="Lumin AI segurança e saude.webp" alt="Lumin AI Segurança" onclick="apresentarLumin('seguranca')">
+                <img src="Lumin_AI_Seguranca.webp" alt="Lumin AI Segurança" onclick="apresentarLumin('seguranca')">
                 <h3>🔒 LUMIN AI Segurança</h3>
                 <p>Proteção de dados e segurança digital avançada.</p>
                 <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
@@ -60,86 +58,59 @@
 
             <!-- LUMIN AI Music -->
             <div class="lumin-card">
-                <img src="Lumin AI Music.webp" alt="Lumin AI Music" onclick="apresentarLumin('music')">
+                <img src="Lumin_AI_Music.webp" alt="Lumin AI Music" onclick="apresentarLumin('music')">
                 <h3>🎵 LUMIN AI Music</h3>
                 <p>Exploração de música com inteligência artificial.</p>
+                <a href="https://buy.stripe.com/9AQaFvbmqeqScFicMM" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Central -->
             <div class="lumin-card">
-                <img src="Lumin AI Central(1).webp" alt="Lumin AI Central" onclick="apresentarLumin('central')">
+                <img src="Lumin_AI_Central.webp" alt="Lumin AI Central" onclick="apresentarLumin('central')">
                 <h3>🌎 LUMIN AI Central</h3>
-                <p>O núcleo do ecossistema que conecta todos os Lumins.</p>
+                <p>O núcleo do ecossistema que conecta todos os Lumins AI.</p>
+                <a href="https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn" class="botao-comprar">Comprar - €500</a>
             </div>
 
         </div>
     </main>
 
-    <div id="chatbot">
-        <h2>🤖 Fale com o LUMIN AI</h2>
-        <input type="text" id="pergunta" placeholder="Escreva sua pergunta...">
-        <button onclick="enviarPergunta()">Enviar</button>
-        <p id="resposta"></p>
-    </div>
-
-    <button onclick="pararNarracao()" class="botao-parar">⏸️ Parar Narração</button>
-
     <script>
-        let narracao = null;
+        let vozAtiva = null;
 
         function apresentarLumin(tipo) {
-            if (narracao) {
-                narracao.cancel();
+            if (vozAtiva) {
+                vozAtiva.cancel(); // Cancela qualquer narração ativa antes de começar outra.
             }
 
-            let texto = "";
-            switch(tipo) {
-                case 'financeiro':
-                    texto = "Olá, eu sou o LUMIN AI Financeiro! Ajudarei você a gerir seus investimentos, prever tendências e garantir o seu sucesso financeiro!";
+            let mensagem = new SpeechSynthesisUtterance();
+
+            switch (tipo) {
+                case "financeiro":
+                    mensagem.text = "Olá! Eu sou o LUMIN AI Financeiro. A minha missão é ajudar-te a gerir os teus investimentos, prever tendências e garantir o teu planeamento financeiro com inteligência artificial.";
                     break;
-                case 'recicle':
-                    texto = "Sou o LUMIN AI Recicle! Vamos juntos cuidar do planeta, identificando materiais recicláveis e conectando você a serviços ecológicos.";
+                case "recicle":
+                    mensagem.text = "Olá! Eu sou o LUMIN AI Recicle. Eu identifico materiais recicláveis e conecto-te aos melhores serviços sustentáveis. Juntos, podemos tornar o planeta mais verde!";
                     break;
-                case 'vision':
-                    texto = "Eu sou o LUMIN AI Vision! Dou suporte a pessoas com deficiência visual através de reconhecimento de imagens.";
+                case "vision":
+                    mensagem.text = "Olá! Eu sou o LUMIN AI Vision. Eu ajudo pessoas com deficiência visual a interpretarem o mundo ao seu redor, através do reconhecimento de imagens e descrição detalhada.";
                     break;
-                case 'seguranca':
-                    texto = "Proteção em primeiro lugar! Sou o LUMIN AI Segurança, pronto para defender seus dados e garantir sua privacidade digital.";
+                case "seguranca":
+                    mensagem.text = "Olá! Eu sou o LUMIN AI Segurança. Protejo os teus dados, deteto ameaças digitais e garanto que a tua navegação na internet seja 100% segura.";
                     break;
-                case 'music':
-                    texto = "O som do futuro! Eu sou o LUMIN AI Music, explorando e criando experiências musicais personalizadas para você!";
+                case "music":
+                    mensagem.text = "Olá! Eu sou o LUMIN AI Music. Descubro novas músicas para ti, crio playlists personalizadas e ofereço uma experiência sonora única com IA.";
                     break;
-                case 'central':
-                    texto = "Eu sou o LUMIN AI Central! O coração do ecossistema, conectando todos os Lumins AI para transformar sua experiência!";
+                case "central":
+                    mensagem.text = "Olá! Eu sou o LUMIN AI Central. Eu sou o cérebro por trás de todos os Lumins AI, conectando todas as nossas funcionalidades para te oferecer uma experiência integrada.";
+                    break;
+                default:
+                    mensagem.text = "Eu sou um LUMIN AI, pronto para te ajudar!";
                     break;
             }
 
-            narracao = new SpeechSynthesisUtterance(texto);
-            speechSynthesis.speak(narracao);
-        }
-
-        function pararNarracao() {
-            if (narracao) {
-                speechSynthesis.cancel();
-            }
-        }
-
-        function enviarPergunta() {
-            let pergunta = document.getElementById("pergunta").value;
-            let resposta = "";
-
-            if (pergunta.includes("preço") || pergunta.includes("custo")) {
-                resposta = "Os Lumins AI custam 500 euros cada.";
-            } else if (pergunta.includes("o que faz") || pergunta.includes("funcionalidade")) {
-                resposta = "Cada Lumin tem funções específicas. Clique sobre eles para ouvir a narração!";
-            } else if (pergunta.includes("comprar")) {
-                resposta = "Pode comprar diretamente nos botões de cada Lumin!";
-            } else {
-                resposta = "Sou o LUMIN AI, estou aqui para ajudar! Pergunte-me sobre os produtos.";
-            }
-
-            document.getElementById("resposta").innerText = resposta;
-            apresentarLumin("chatbot");
+            vozAtiva = speechSynthesis;
+            vozAtiva.speak(mensagem);
         }
     </script>
 
