@@ -1,94 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Os 7 Lumins AI</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script>
-</head>
-<body>
-
-    <header>
-        <h1>🔷 Os 7 Lumins AI</h1>
-        <nav>
-            <a href="index.html">Página Inicial</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="testemunhos.html">Testemunhos</a>
-            <a href="faq.html">FAQ</a>
-            <a href="compra.html" class="cta">Comprar Agora</a>
-        </nav>
-    </header>
-
-    <h2>✨ Conhece os Lumins AI! ✨</h2>
-
-    <div class="lumin-container">
-
-        <!-- LUMIN AI Financeiro -->
-        <div class="lumin">
-            <img src="main/Lumin_Ai_FINANCEIRO.webp" alt="LUMIN AI Financeiro" onclick="narrarTexto('Olá! Eu sou o LUMIN AI Financeiro. Analiso o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.')">
-            <h2>💰 LUMIN AI Financeiro</h2>
-            <p>Analisa o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.</p>
-            <a href="compra.html" class="botao">Comprar - €500</a>
-        </div>
-
-        <!-- LUMIN AI Assistente -->
-        <div class="lumin">
-            <img src="main/Lumin_Ai_Assistente.webp" alt="LUMIN AI Assistente" onclick="narrarTexto('Sou o LUMIN AI Assistente! Auxilio-te nas tuas tarefas diárias e organizo a tua agenda de forma eficiente.')">
-            <h2>🤖 LUMIN AI Assistente</h2>
-            <p>Auxilia nas tuas tarefas diárias e organiza a tua agenda de forma eficiente.</p>
-        </div>
-
-        <!-- LUMIN AI Recicle -->
-        <div class="lumin">
-            <img src="main/Lumin_Ai_Recicle.webp" alt="LUMIN AI Recicle" onclick="narrarTexto('Sou o LUMIN AI Recicle! Ajudo a gerir resíduos e reciclagem de forma inteligente para um futuro sustentável.')">
-            <h2>♻️ LUMIN AI Recicle</h2>
-            <p>Ajuda a gerir resíduos e reciclagem de forma inteligente para um futuro sustentável.</p>
-        </div>
-
-        <!-- LUMIN AI Vision -->
-        <div class="lumin">
-            <img src="main/Lumin_Ai_Vision.webp" alt="LUMIN AI Vision" onclick="narrarTexto('Eu sou o LUMIN AI Vision. Uso tecnologia avançada de visão computacional para ajudar na acessibilidade e análise de imagens.')">
-            <h2>👁️ LUMIN AI Vision</h2>
-            <p>Utiliza tecnologia de visão computacional para ajudar na acessibilidade e análise de imagens.</p>
-        </div>
-
-        <!-- LUMIN AI Segurança -->
-        <div class="lumin">
-            <img src="main/Lumin_Ai_Seguranca.webp" alt="LUMIN AI Segurança" onclick="narrarTexto('Sou o LUMIN AI Segurança! Protejo os teus dados e sistemas contra ameaças cibernéticas.')">
-            <h2>🔒 LUMIN AI Segurança</h2>
-            <p>Protege os teus dados e sistemas contra ameaças cibernéticas.</p>
-        </div>
-
-        <!-- LUMIN AI Music -->
-        <div class="lumin">
-            <img src="main/Lumin_Ai_Music.webp" alt="LUMIN AI Music" onclick="narrarTexto('Sou o LUMIN AI Music! Personalizo as tuas playlists e descubro novas músicas para ti.')">
-            <h2>🎵 LUMIN AI Music</h2>
-            <p>Personaliza playlists e descobre novas músicas para ti.</p>
-        </div>
-
-        <!-- LUMIN AI Central -->
-        <div class="lumin">
-            <img src="main/Lumin_Ai_Central.webp" alt="LUMIN AI Central" onclick="narrarTexto('Sou o LUMIN AI Central! O núcleo que conecta todos os Lumins AI para uma experiência integrada e perfeita.')">
-            <h2>🌎 LUMIN AI Central</h2>
-            <p>O núcleo que conecta todos os Lumins AI para uma experiência integrada e perfeita.</p>
-        </div>
-
+<div class="lumin-container">
+    <!-- LUMIN AI Financeiro -->
+    <div class="lumin">
+        <img src="Lumin AI FINANCEIRO.webp" alt="LUMIN AI Financeiro">
+        <h2>💰 LUMIN AI Financeiro</h2>
+        <p>Analisa o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.</p>
     </div>
 
-    <script>
-        let sintese = window.speechSynthesis;
-        let vozAtiva;
+    <!-- LUMIN AI Assistente -->
+    <div class="lumin">
+        <img src="Lumin AI Assistente.webp" alt="LUMIN AI Assistente">
+        <h2>🤖 LUMIN AI Assistente</h2>
+        <p>Auxilia nas tuas tarefas diárias e organiza a tua agenda de forma eficiente.</p>
+    </div>
 
-        function narrarTexto(texto) {
-            if (vozAtiva) {
-                sintese.cancel(); // Para qualquer narração ativa
-            }
-            vozAtiva = new SpeechSynthesisUtterance(texto);
-            vozAtiva.lang = 'pt-PT'; // Definir para português de Portugal
-            sintese.speak(vozAtiva);
-        }
-    </script>
+    <!-- LUMIN AI Agent -->
+    <div class="lumin">
+        <img src="Lumin AI Agent.webp" alt="LUMIN AI Agent">
+        <h2>🛠️ LUMIN AI Agent</h2>
+        <p>Ajuda desenvolvedores a criar projetos com inteligência artificial.</p>
+    </div>
 
-</body>
-</html>
+    <!-- LUMIN AI Recycle -->
+    <div class="lumin">
+        <img src="Lumin AI Recicle.webp" alt="LUMIN AI Recycle">
+        <h2>♻️ LUMIN AI Recycle</h2>
+        <p>Promove a sustentabilidade ajudando a gerir resíduos e reciclagem de forma inteligente.</p>
+    </div>
+
+    <!-- LUMIN AI Vision -->
+    <div class="lumin">
+        <img src="Lumin AI Vision.webp" alt="LUMIN AI Vision">
+        <h2>👁️ LUMIN AI Vision</h2>
+        <p>Utiliza tecnologia de visão computacional para ajudar na acessibilidade e análise de imagens.</p>
+    </div>
+
+    <!-- LUMIN AI Segurança e Saúde -->
+    <div class="lumin">
+        <img src="Lumin AI segurança e saude.webp" alt="LUMIN AI Segurança">
+        <h2>🔒 LUMIN AI Segurança</h2>
+        <p>Protege os teus dados e sistemas contra ameaças cibernéticas.</p>
+    </div>
+
+    <!-- LUMIN AI Central -->
+    <div class="lumin">
+        <img src="Lumin AI Central(1).webp" alt="LUMIN AI Central">
+        <h2>🌎 LUMIN AI Central</h2>
+        <p>O núcleo do ecossistema que conecta todos os Lumins.</p>
+    </div>
+</div>
