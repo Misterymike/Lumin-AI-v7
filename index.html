@@ -5,10 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        .lumin-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .lumin-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .botao-comprar {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .botao-comprar:hover {
+            background-color: #45a049;
+        }
+    </style>
+
     <script>
         function narrarTexto(texto) {
             let sintese = new SpeechSynthesisUtterance(texto);
-            speechSynthesis.cancel();  // Para qualquer narração anterior
+            speechSynthesis.cancel();
             speechSynthesis.speak(sintese);
         }
     </script>
@@ -22,6 +68,7 @@
             <a href="sobre.html">Sobre</a>
             <a href="testemunhos.html">Testemunhos</a>
             <a href="faq.html">FAQ</a>
+            <a href="landingpage.html">Landing Page</a>
             <a href="compra.html" class="cta">Comprar Agora</a>
         </nav>
     </header>
@@ -31,7 +78,6 @@
 
         <div class="lumin-container">
 
-            <!-- LUMIN AI Financeiro -->
             <div class="lumin-card">
                 <img src="Lumin Ai FINANCEIRO.webp" alt="Lumin AI Financeiro" onclick="narrarTexto('Eu sou o LUMIN AI Financeiro! Comigo, vais maximizar os teus ganhos, analisar tendências do mercado e tomar as melhores decisões financeiras.')">
                 <h3>💰 LUMIN AI Financeiro</h3>
@@ -39,7 +85,6 @@
                 <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
             </div>
 
-            <!-- LUMIN AI Assistente -->
             <div class="lumin-card">
                 <img src="Lumin AI Assistente.webp" alt="Lumin AI Assistente" onclick="narrarTexto('Eu sou o LUMIN AI Assistente! Estou aqui para te ajudar com as tuas tarefas diárias e organizar a tua agenda de forma eficiente.')">
                 <h3>🤖 LUMIN AI Assistente</h3>
@@ -47,7 +92,6 @@
                 <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-comprar">Comprar - €500</a>
             </div>
 
-            <!-- LUMIN AI Agent -->
             <div class="lumin-card">
                 <img src="Lumin AI Agent.webp" alt="Lumin AI Agent" onclick="narrarTexto('Eu sou o LUMIN AI Agent! Sou o teu parceiro para criar projetos inovadores com inteligência artificial.')">
                 <h3>🛠️ LUMIN AI Agent</h3>
@@ -55,7 +99,6 @@
                 <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
             </div>
 
-            <!-- LUMIN AI Recicle -->
             <div class="lumin-card">
                 <img src="Lumin Ai Recicle.webp" alt="Lumin AI Recicle" onclick="narrarTexto('Eu sou o LUMIN AI Recicle! Ajudo-te a reciclar e a gerir resíduos de forma inteligente para um planeta mais sustentável.')">
                 <h3>♻️ LUMIN AI Recicle</h3>
@@ -63,7 +106,6 @@
                 <a href="https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn" class="botao-comprar">Comprar - €500</a>
             </div>
 
-            <!-- LUMIN AI Vision -->
             <div class="lumin-card">
                 <img src="Lumin AI Vision.webp" alt="Lumin AI Vision" onclick="narrarTexto('Eu sou o LUMIN AI Vision! Utilizo tecnologia de visão computacional para te ajudar na acessibilidade e na análise de imagens.')">
                 <h3>👁️ LUMIN AI Vision</h3>
@@ -71,7 +113,6 @@
                 <a href="https://buy.stripe.com/3cs3d3aim5Um8p2002" class="botao-comprar">Comprar - €500</a>
             </div>
 
-            <!-- LUMIN AI Segurança -->
             <div class="lumin-card">
                 <img src="Lumin AI segurança e saude.webp" alt="Lumin AI Segurança" onclick="narrarTexto('Eu sou o LUMIN AI Segurança! Protejo os teus dados e sistemas contra ameaças cibernéticas.')">
                 <h3>🔒 LUMIN AI Segurança</h3>
@@ -79,9 +120,22 @@
                 <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-comprar">Comprar - €500</a>
             </div>
 
-            <!-- LUMIN AI Central -->
             <div class="lumin-card">
                 <img src="Lumin AI Central(1).webp" alt="Lumin AI Central" onclick="narrarTexto('Eu sou o LUMIN AI Central! Sou o núcleo que conecta todos os Lumins e cria um ecossistema inteligente.')">
                 <h3>🌎 LUMIN AI Central</h3>
                 <p>O núcleo do ecossistema que conecta todos os Lumins.</p>
-                <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-comprar">Comprar - €
+                <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-comprar">Comprar - €500</a>
+            </div>
+
+            <div class="lumin-card">
+                <img src="Lumin AI Music.webp" alt="Lumin AI Music" onclick="narrarTexto('Eu sou o LUMIN AI Music! Exploro o mundo da música com inteligência artificial para te proporcionar experiências sonoras únicas.')">
+                <h3>🎵 LUMIN AI Music</h3>
+                <p>Exploração de música com inteligência artificial.</p>
+                <a href="https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn" class="botao-comprar">Comprar - €500</a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
