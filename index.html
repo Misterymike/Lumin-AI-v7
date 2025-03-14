@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script> <!-- Script para a narração -->
+    <script src="narracao.js" defer></script> <!-- Script de narração -->
 </head>
 <body>
-
     <header>
         <h1>🔷 Os 7 Lumins AI</h1>
         <nav>
@@ -27,99 +26,23 @@
 
             <!-- LUMIN AI Financeiro -->
             <div class="lumin-card">
-                <img src="imagens/Lumin Ai FINANCEIRO.webp" alt="Lumin AI Financeiro" onclick="narrarFinanceiro()">
+                <img src="Lumin AI FINANCEIRO.webp" alt="Lumin AI Financeiro" onclick="narrarTexto('Eu sou o LUMIN AI Financeiro! Análiso o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.')">
                 <h3>💰 LUMIN AI Financeiro</h3>
-                <p>Analisa o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.</p>
-                <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-comprar">Comprar - €500</a>
+                <p>Analiso o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.</p>
+                <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Assistente -->
             <div class="lumin-card">
-                <img src="imagens/Lumin AI Assistente.webp" alt="Lumin AI Assistente" onclick="narrarAssistente()">
+                <img src="Lumin AI Assistente.webp" alt="Lumin AI Assistente" onclick="narrarTexto('Eu sou o LUMIN AI Assistente! Auxilio nas tuas tarefas diárias e organizo a tua agenda.')">
                 <h3>🤖 LUMIN AI Assistente</h3>
                 <p>Auxilia nas tuas tarefas diárias e organiza a tua agenda de forma eficiente.</p>
-                <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-comprar">Comprar - €500</a>
+                <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Agent -->
             <div class="lumin-card">
-                <img src="imagens/Lumin AI Agent.webp" alt="Lumin AI Agent" onclick="narrarAgent()">
+                <img src="Lumin AI Agent.webp" alt="Lumin AI Agent" onclick="narrarTexto('Eu sou o LUMIN AI Agent! Ajudando desenvolvedores a criar projetos com inteligência artificial.')">
                 <h3>🛠️ LUMIN AI Agent</h3>
                 <p>Ajuda desenvolvedores a criar projetos com inteligência artificial.</p>
-                <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
-            </div>
-
-            <!-- LUMIN AI Recycle -->
-            <div class="lumin-card">
-                <img src="imagens/Lumin Ai Recicle.webp" alt="Lumin AI Recycle" onclick="narrarRecicle()">
-                <h3>♻️ LUMIN AI Recycle</h3>
-                <p>Promove a sustentabilidade ajudando a gerir resíduos e reciclagem de forma inteligente.</p>
-                <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
-            </div>
-
-            <!-- LUMIN AI Vision -->
-            <div class="lumin-card">
-                <img src="imagens/Lumin AI Vision.webp" alt="Lumin AI Vision" onclick="narrarVision()">
-                <h3>👁️ LUMIN AI Vision</h3>
-                <p>Utiliza tecnologia de visão computacional para ajudar na acessibilidade e análise de imagens.</p>
-                <a href="https://buy.stripe.com/3cs3d3aim5Um8p2002" class="botao-comprar">Comprar - €500</a>
-            </div>
-
-            <!-- LUMIN AI Segurança -->
-            <div class="lumin-card">
-                <img src="imagens/Lumin AI segurança e saude.webp" alt="Lumin AI Segurança" onclick="narrarSeguranca()">
-                <h3>🔒 LUMIN AI Segurança</h3>
-                <p>Protege os teus dados e sistemas contra ameaças cibernéticas.</p>
-                <a href="https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn" class="botao-comprar">Comprar - €500</a>
-            </div>
-
-            <!-- LUMIN AI Central -->
-            <div class="lumin-card">
-                <img src="imagens/Lumin AI Central(1).webp" alt="Lumin AI Central" onclick="narrarCentral()">
-                <h3>🌎 LUMIN AI Central</h3>
-                <p>O núcleo do ecossistema que conecta todos os Lumins.</p>
-                <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
-            </div>
-
-        </div>
-    </main>
-
-    <script>
-        function narrarTexto(texto) {
-            let synth = window.speechSynthesis;
-            let mensagem = new SpeechSynthesisUtterance(texto);
-            synth.cancel(); 
-            synth.speak(mensagem);
-        }
-
-        function narrarFinanceiro() {
-            narrarTexto("Olá! Eu sou o LUMIN AI Financeiro. Se procuras maximizar os teus ganhos e tomar decisões estratégicas no mercado, sou o assistente ideal. Bolsa, criptomoedas e investimentos são a minha especialidade!");
-        }
-
-        function narrarAssistente() {
-            narrarTexto("Eu sou o LUMIN AI Assistente. Organização e produtividade são fundamentais no teu dia a dia. Deixa-me ajudar-te a gerir as tuas tarefas e simplificar a tua vida!");
-        }
-
-        function narrarAgent() {
-            narrarTexto("Eu sou o LUMIN AI Agent. Desenvolvedores, sou o vosso aliado na criação de projetos com inteligência artificial! Automatização, código eficiente e inovação começam comigo!");
-        }
-
-        function narrarRecicle() {
-            narrarTexto("Eu sou o LUMIN AI Recycle. O planeta precisa de nós. Ajudo-te a gerir resíduos e reciclagem de forma inteligente, garantindo um futuro mais sustentável!");
-        }
-
-        function narrarVision() {
-            narrarTexto("Eu sou o LUMIN AI Vision. A visão computacional é a minha força. Ajudo na acessibilidade e análise de imagens, melhorando a tua experiência digital!");
-        }
-
-        function narrarSeguranca() {
-            narrarTexto("Eu sou o LUMIN AI Segurança. A tua segurança online é a minha prioridade. Protejo os teus dados e sistemas contra ameaças digitais, garantindo a tua privacidade!");
-        }
-
-        function narrarCentral() {
-            narrarTexto("Eu sou o LUMIN AI Central. O coração do ecossistema LUMIN AI. Sou eu quem conecta todos os Lumins e garante a melhor experiência para ti!");
-        }
-    </script>
-
-</body>
-</html>
+                <a href="https://
