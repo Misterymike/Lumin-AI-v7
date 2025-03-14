@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Os 7 Lumins AI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="narracao.js" defer></script>
+    <script src="narracao.js" defer></script> <!-- Arquivo para narração -->
 </head>
-<body onload="boasVindas()">
+<body>
 
     <header>
         <h1>🔷 Os 7 Lumins AI</h1>
@@ -21,93 +21,100 @@
     </header>
 
     <main>
-        <h2>✨ Conhece os Lumins AI! ✨</h2>
+        <h2>✨ Conheça os Lumins AI! ✨</h2>
 
         <div class="lumin-container">
 
             <!-- LUMIN AI Financeiro -->
-            <div class="lumin-card">
+            <div class="lumin-card" onclick="narrar('financeiro')">
                 <img src="Lumin AI FINANCEIRO.webp" alt="Lumin AI Financeiro">
                 <h3>💰 LUMIN AI Financeiro</h3>
                 <p>Analisa o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.</p>
+                <a href="https://buy.stripe.com/aEUdRH4Y20A2bBecMT" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Assistente -->
-            <div class="lumin-card">
+            <div class="lumin-card" onclick="narrar('assistente')">
                 <img src="Lumin AI Assistente.webp" alt="Lumin AI Assistente">
                 <h3>🤖 LUMIN AI Assistente</h3>
                 <p>Auxilia nas tuas tarefas diárias e organiza a tua agenda de forma eficiente.</p>
+                <a href="https://buy.stripe.com/bIYbJz8ae4QieNq28e" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Agent -->
-            <div class="lumin-card">
+            <div class="lumin-card" onclick="narrar('agent')">
                 <img src="Lumin AI Agent.webp" alt="Lumin AI Agent">
                 <h3>🛠️ LUMIN AI Agent</h3>
                 <p>Ajuda desenvolvedores a criar projetos com inteligência artificial.</p>
+                <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Recycle -->
-            <div class="lumin-card">
+            <div class="lumin-card" onclick="narrar('recicle')">
                 <img src="Lumin AI Recycle.webp" alt="Lumin AI Recycle">
                 <h3>♻️ LUMIN AI Recycle</h3>
                 <p>Promove a sustentabilidade ajudando a gerir resíduos e reciclagem de forma inteligente.</p>
+                <a href="https://buy.stripe.com/4gw7tj76a82uaxa8wB" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Vision -->
-            <div class="lumin-card">
+            <div class="lumin-card" onclick="narrar('vision')">
                 <img src="Lumin AI Vision.webp" alt="Lumin AI Vision">
                 <h3>👁️ LUMIN AI Vision</h3>
                 <p>Utiliza tecnologia de visão computacional para ajudar na acessibilidade e análise de imagens.</p>
+                <a href="https://buy.stripe.com/3cs3d3aim5Um8p2002" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Security -->
-            <div class="lumin-card">
+            <div class="lumin-card" onclick="narrar('seguranca')">
                 <img src="Lumin AI segurança e saude.webp" alt="Lumin AI Security">
                 <h3>🔒 LUMIN AI Security</h3>
                 <p>Protege os teus dados e sistemas contra ameaças cibernéticas.</p>
+                <a href="https://buy.stripe.com/bIY9Br4Y2gz0gVy5kn" class="botao-comprar">Comprar - €500</a>
             </div>
 
             <!-- LUMIN AI Central -->
-            <div class="lumin-card">
+            <div class="lumin-card" onclick="narrar('central')">
                 <img src="Lumin AI Central.webp" alt="Lumin AI Central">
                 <h3>🌎 LUMIN AI Central</h3>
                 <p>O núcleo do ecossistema que conecta todos os Lumins.</p>
+                <a href="https://buy.stripe.com/aEUbJz4Y2eqSgVybIM" class="botao-comprar">Comprar - €500</a>
             </div>
 
         </div>
     </main>
 
     <script>
-        let synth = window.speechSynthesis;
+        function narrar(tipo) {
+            let synth = window.speechSynthesis;
+            let texto = "";
 
-        function boasVindas() {
-            let mensagem = new SpeechSynthesisUtterance("Bem-vindo ao mundo dos Lumins AI! Conheça os assistentes inteligentes que vão revolucionar a sua vida. Explore agora!");
+            switch(tipo) {
+                case "financeiro":
+                    texto = "Eu sou o LUMIN AI Financeiro! Analiso o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.";
+                    break;
+                case "assistente":
+                    texto = "Eu sou o LUMIN AI Assistente! Auxilio nas tuas tarefas diárias e organizo a tua agenda de forma eficiente.";
+                    break;
+                case "agent":
+                    texto = "Eu sou o LUMIN AI Agent! Ajudo desenvolvedores a criar projetos incríveis com inteligência artificial.";
+                    break;
+                case "recicle":
+                    texto = "Eu sou o LUMIN AI Recycle! Promovo a sustentabilidade, ajudando-te a gerir resíduos e reciclagem de forma inteligente.";
+                    break;
+                case "vision":
+                    texto = "Eu sou o LUMIN AI Vision! Uso tecnologia de visão computacional para acessibilidade e análise de imagens.";
+                    break;
+                case "seguranca":
+                    texto = "Eu sou o LUMIN AI Security! Protejo os teus dados e sistemas contra todas as ameaças digitais.";
+                    break;
+                case "central":
+                    texto = "Eu sou o LUMIN AI Central! O núcleo que conecta todos os Lumins e garante a tua experiência completa no ecossistema!";
+                    break;
+            }
+
+            let mensagem = new SpeechSynthesisUtterance(texto);
             synth.speak(mensagem);
-
-            setTimeout(() => {
-                apresentarLumins();
-            }, 6000); // Aguarda 6 segundos antes de iniciar a apresentação dos Lumins
-        }
-
-        function apresentarLumins() {
-            let pitches = [
-                "Eu sou o LUMIN AI Financeiro! Analiso o mercado, bolsa e criptomoedas para maximizar os teus ganhos financeiros.",
-                "Eu sou o LUMIN AI Assistente! Auxilio nas tuas tarefas diárias e organizo a tua agenda de forma eficiente.",
-                "Eu sou o LUMIN AI Agent! Ajudo desenvolvedores a criar projetos incríveis com inteligência artificial.",
-                "Eu sou o LUMIN AI Recycle! Promovo a sustentabilidade, ajudando-te a gerir resíduos e reciclagem de forma inteligente.",
-                "Eu sou o LUMIN AI Vision! Uso tecnologia de visão computacional para acessibilidade e análise de imagens.",
-                "Eu sou o LUMIN AI Security! Protejo os teus dados e sistemas contra todas as ameaças digitais.",
-                "Eu sou o LUMIN AI Central! O núcleo que conecta todos os Lumins e garante a tua experiência completa no ecossistema!"
-            ];
-
-            let delay = 0;
-            pitches.forEach((texto, index) => {
-                setTimeout(() => {
-                    let pitch = new SpeechSynthesisUtterance(texto);
-                    synth.speak(pitch);
-                }, delay);
-                delay += 7000; // Tempo entre cada LUMIN AI se apresentar
-            });
         }
     </script>
 
